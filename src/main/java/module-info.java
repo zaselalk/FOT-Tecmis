@@ -5,6 +5,6 @@ module com.fottecmis.fottecmis {
     requires java.sql;
 
 
-    opens com.fottecmis to javafx.fxml;
+    opens com.fottecmis.Authenticate to javafx.fxml;
     exports com.fottecmis;
 }
