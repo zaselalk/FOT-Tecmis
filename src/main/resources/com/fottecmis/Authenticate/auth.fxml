@@ -6,11 +6,9 @@
 <?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.fottecmis.Authenticate.AuthController">
-    <children>
-        <Text layoutX="44.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login"
-              wrappingWidth="59.29931640625"/>
-        <TextField fx:id="email_address" layoutX="44.0" layoutY="70.0"/>
-        <TextField fx:id="password" layoutX="44.0" layoutY="114.0"/>
-        <Button layoutX="51.0" layoutY="159.0" mnemonicParsing="false" onAction="#login" text="Login"/>
-    </children>
+   <Text layoutX="44.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login"
+         wrappingWidth="59.29931640625"/>
+   <TextField fx:id="email_address" layoutX="44.0" layoutY="70.0"/>
+   <TextField fx:id="password" layoutX="44.0" layoutY="114.0"/>
+   <Button layoutX="51.0" layoutY="159.0" mnemonicParsing="false" onAction="#login" text="Login"/>
 </AnchorPane>
