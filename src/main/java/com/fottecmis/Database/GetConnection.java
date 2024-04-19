@@ -20,7 +20,7 @@ public class GetConnection {
     public Connection getMyConnection(String user, String password) throws DatabaseConnectionException {
         try {
             registerConnection();
-            String url = "Jdbc:mysql://localhost:3306/student";
+            String url = "jdbc:mysql://mysql-server-tecmis.mysql.database.azure.com:3306/tecmis?useSSL=true&requireSSL=false&serverTimezone=UTC";
 
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
