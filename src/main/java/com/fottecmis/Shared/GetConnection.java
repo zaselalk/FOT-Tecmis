@@ -1,4 +1,4 @@
-package com.fottecmis.Database;
+package com.fottecmis.Shared;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,7 +1,7 @@
 package com.fottecmis.Admin;
 
-import com.fottecmis.Database.DatabaseConnectionException;
-import com.fottecmis.Database.GetConnection;
+import com.fottecmis.Shared.DatabaseConnectionException;
+import com.fottecmis.Shared.GetConnection;
 
 import java.sql.Connection;
 
