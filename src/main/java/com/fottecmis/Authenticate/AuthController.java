@@ -13,7 +13,7 @@ public class AuthController {
     @FXML
     private TextField password;
 
-    private boolean authenticateUser(String email_address, String password) {
+    boolean authenticateUser(String email_address, String password) {
         try {
             PreparedStatement pres = authDatabaseConnection.getAuthConnection().prepareStatement("SELECT * FROM users WHERE email_address = ? AND plain_password = ?");
 
