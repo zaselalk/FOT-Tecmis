@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.fottecmis.Notice.NoticeController">
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Notice.NoticeController">
     <children>
-        <Text layoutX="286.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notice"/>
+        <Text layoutX="286.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notice">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
     </children>
 </AnchorPane>
