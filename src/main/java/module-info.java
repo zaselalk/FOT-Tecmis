@@ -7,6 +7,7 @@ module com.fottecmis.fottecmis {
 
 
     opens com.fottecmis.Authenticate to javafx.fxml;
+    opens com.fottecmis.Notice to javafx.fxml;
 //    opens com.fottecmis.Interfaces to javafx.fxml;
     opens com.fottecmis.Student to javafx.fxml;
     opens com.fottecmis.TestMap to javafx.fxml;
