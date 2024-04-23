@@ -10,8 +10,6 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("TestMap/map-view.fxml"));
-        //        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Authenticate/auth.fxml"));
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Interfaces/TestMap/map-view.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
