@@ -1,12 +1,21 @@
 package com.fottecmis.Authenticate;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.PreparedStatement;
 
 public class AuthController {
     private final AuthDatabaseConnection authDatabaseConnection = new AuthDatabaseConnection();
+    private Stage stage;
+    private Scene scene;
+    private Parent parent;
 
     @FXML
     private TextField email_address;
@@ -35,5 +44,14 @@ public class AuthController {
         } else {
             System.out.println("Login Failed");
         }
+    }
+
+    public void showLoginScreen(ActionEvent event) throws Exception {
+        Parent loginscene = FXMLLoader.load(getClass().getResource("/com/fottecmis/Interfaces/Authenticate/auth.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(loginscene);
+        stage.setScene(scene);
+        stage.show();
+
     }
 }
