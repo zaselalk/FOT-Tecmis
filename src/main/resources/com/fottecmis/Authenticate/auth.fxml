@@ -10,15 +10,15 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Authenticate.AuthController">
-   <TextField fx:id="email_address" layoutX="416.0" layoutY="169.0" />
-   <TextField fx:id="password" layoutX="416.0" layoutY="208.0" />
-   <Button layoutX="428.0" layoutY="247.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="125.0" text="Login" textFill="WHITE" wrapText="true">
+   <TextField fx:id="email_address" layoutX="428.0" layoutY="174.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 20px; -fx-opacity: 0.5;;" />
+   <TextField fx:id="password" layoutX="428.0" layoutY="207.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 20px;;" />
+   <Button layoutX="447.0" layoutY="251.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #3C91E6; -fx-font-family: Inter; -fx-font-weight: 700; -fx-border-radius: 20px; -fx-background-size: 410px;" text="Login" textFill="WHITE" wrapText="true">
       <font>
          <Font size="15.0" />
       </font></Button>
-   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c91e6" height="297.0" layoutX="-1.0" layoutY="46.0" stroke="#3c91e6" strokeType="INSIDE" width="400.0" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c91e6" height="323.0" layoutX="-1.0" layoutY="38.0" stroke="#3c91e6" strokeType="INSIDE" width="409.0" />
    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c5d9d" height="48.0" layoutY="-2.0" stroke="#3c91e6" strokeType="INSIDE" width="600.0" />
-   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c5d9d" height="65.0" layoutY="342.0" stroke="#1c5d9d" strokeType="INSIDE" width="600.0" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c5d9d" height="59.0" layoutY="348.0" stroke="#1c5d9d" strokeType="INSIDE" width="600.0" />
    <Text fill="WHITE" layoutX="17.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faculty Of Technology " textAlignment="CENTER" wrappingWidth="364.0186462402344">
       <font>
          <Font size="30.0" />
@@ -29,36 +29,38 @@
          <Font name="Arial" size="30.0" />
       </font>
    </Text>
-   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="24.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView id="#myImage" fitHeight="80.0" fitWidth="88.0" layoutX="21.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: ellips;">
       <image>
          <Image url="@../../../images/admin.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="143.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="131.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../images/student.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="247.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="247.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../images/lecture.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="463.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="479.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../images/logo.png" />
       </image>
    </ImageView>
-   <Text fill="#0b132b" layoutX="450.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Portal">
+   <Text fill="#0b132b" layoutX="456.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN PORTAL">
       <font>
          <Font size="14.0" />
       </font>
    </Text>
-   <Text fill="WHITE" layoutX="24.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
-   <Text fill="WHITE" layoutX="154.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" />
-   <Text fill="WHITE" layoutX="260.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture" />
-   <Text fill="WHITE" layoutX="154.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Virtual Learning Management System" textAlignment="CENTER" />
-   <Text fill="WHITE" layoutX="232.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="of Faculty of Technology" />
-   <Text layoutX="486.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" />
+   <Text fill="WHITE" layoutX="48.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
+   <Text fill="WHITE" layoutX="154.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" />
+   <Text fill="WHITE" layoutX="271.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture" />
+   <Text fill="WHITE" layoutX="154.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Virtual Learning Management System" textAlignment="CENTER" />
+   <Text fill="WHITE" layoutX="232.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="of Faculty of Technology" />
+   <Text layoutX="486.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" />
    <Text layoutX="554.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FAQ" />
+   <Text layoutX="470.0" layoutY="191.0" opacity="0.22" strokeType="OUTSIDE" strokeWidth="0.0" text="username" />
+   <Text layoutX="472.0" layoutY="225.0" opacity="0.22" strokeType="OUTSIDE" strokeWidth="0.0" text="password" />
 </AnchorPane>
