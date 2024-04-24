@@ -10,7 +10,6 @@ module com.fottecmis.fottecmis {
 //    opens com.fottecmis.Interfaces to javafx.fxml;
     opens com.fottecmis.Student to javafx.fxml;
     opens com.fottecmis.TestMap to javafx.fxml;
-//    opens com.fottecmis.Student to javafx.fxml;
 
     exports com.fottecmis;
 }
