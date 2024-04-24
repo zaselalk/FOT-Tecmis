@@ -29,17 +29,17 @@
          <Font name="Arial" size="30.0" />
       </font>
    </Text>
-   <ImageView id="#myImage" fitHeight="80.0" fitWidth="88.0" layoutX="21.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: ellips;">
+   <ImageView id="#myImage" fitHeight="80.0" fitWidth="88.0" layoutX="39.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: ellips;">
       <image>
          <Image url="@../../../images/admin.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="131.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="160.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../images/student.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="247.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="282.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../images/lecture.png" />
       </image>
@@ -54,9 +54,9 @@
          <Font size="14.0" />
       </font>
    </Text>
-   <Text fill="WHITE" layoutX="48.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
-   <Text fill="WHITE" layoutX="154.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" />
-   <Text fill="WHITE" layoutX="271.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture" />
+   <Text fill="WHITE" layoutX="66.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
+   <Text fill="WHITE" layoutX="178.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" />
+   <Text fill="WHITE" layoutX="300.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture" />
    <Text fill="WHITE" layoutX="154.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Virtual Learning Management System" textAlignment="CENTER" />
    <Text fill="WHITE" layoutX="232.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="of Faculty of Technology" />
    <Text layoutX="486.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" />
