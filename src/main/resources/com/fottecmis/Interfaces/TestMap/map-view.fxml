@@ -9,5 +9,7 @@
         <Text layoutX="211.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Map of the screens of system"/>
         <Button layoutX="25.0" layoutY="84.0" mnemonicParsing="false" onAction="#showLoginScene" text="Login"/>
+        <Button layoutX="98.0" layoutY="84.0" mnemonicParsing="false" onAction="#showEditProfileScene"
+                text="Edit Profiel"/>
     </children>
 </AnchorPane>
