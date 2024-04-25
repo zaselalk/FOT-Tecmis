@@ -8,7 +8,7 @@ import java.sql.Connection;
 public class NoticeDatabaseConnection {
     private final GetConnection getConnection = new GetConnection();
 
-    public Connection getAuthConnection() throws DatabaseConnectionException {
+    public Connection getNoticeConnection() throws DatabaseConnectionException {
         String username = "student";
         String password = "stu123";
         return getConnection.getMyConnection(username, password);

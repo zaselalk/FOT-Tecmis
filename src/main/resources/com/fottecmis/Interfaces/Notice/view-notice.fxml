@@ -20,10 +20,10 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <TableView layoutX="28.0" layoutY="95.0" prefHeight="251.0" prefWidth="535.0">
+      <TableView fx:id="table" layoutX="28.0" layoutY="95.0" prefHeight="251.0" prefWidth="535.0">
         <columns>
-          <TableColumn prefWidth="107.19999694824219" text="           Date" />
-          <TableColumn prefWidth="427.2000152587891" text="                                                              Description" />
+          <TableColumn fx:id="date" prefWidth="107.19999694824219" text="           Date" />
+          <TableColumn fx:id="description" prefWidth="427.2000152587891" text="                                                              Description" />
         </columns>
       </TableView>
       <Button layoutX="341.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: blue;" text="Dashbord" textFill="WHITE" />
