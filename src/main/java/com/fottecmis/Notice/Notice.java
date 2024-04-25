@@ -5,19 +5,19 @@ import javafx.beans.property.StringProperty;
 
 public class Notice {
     private final StringProperty date;
-    private final StringProperty title;
+    private final StringProperty description;
 
-    public Notice(String date, String title) {
+    public Notice(String date, String description) {
         this.date = new SimpleStringProperty(date);
-        this.title = new SimpleStringProperty(title);
+        this.description = new SimpleStringProperty(description);
     }
 
     public StringProperty dateProperty() {
         return date;
     }
 
-    public StringProperty titleProperty() {
-        return title;
+    public StringProperty descriptionProperty() {
+        return description;
     }
 
 }

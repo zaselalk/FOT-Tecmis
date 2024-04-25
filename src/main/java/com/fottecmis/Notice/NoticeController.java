@@ -31,10 +31,10 @@ public class NoticeController {
     private Button dashbord;
 
     @FXML
-    private TableColumn<Notification, String> date;
+    private TableColumn<Notice, String> date;
 
     @FXML
-    private TableColumn<Notification, String> description;
+    private TableColumn<Notice, String> description;
 
     @FXML
     private Button faq;
@@ -46,7 +46,7 @@ public class NoticeController {
     private Text notices_text;
 
     @FXML
-    private TableView<Notification> table;
+    private TableView<Notice> table;
 
     private Stage stage;
     private Scene scene;
@@ -64,15 +64,16 @@ public class NoticeController {
 //        code here
 //        create database connection - NoticeDatabaseConnection
         public void initialize() {
+
             date.setCellValueFactory(cellData -> cellData.getValue().dateProperty());
-            description.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
+            description.setCellValueFactory(cellData -> cellData.getValue().descriptionProperty());
 
             loadTable();
         }
         public void loadTable() {
 
             NoticeDatabaseConnection dc = new NoticeDatabaseConnection();
-            Connection con = dc.getMyConnection();
+            Connection con = dc.getConnection();
 
             try {
 
@@ -81,8 +82,8 @@ public class NoticeController {
                 ResultSet rs = stmt.executeQuery(myStatement);
 
                 while (rs.next()) {
-                    Notification notification = new Notification(rs.getString("date"), rs.getString("title"));
-                    notifiTable.getItems().add(notification);
+                    Notice noti = new Notice(rs.getString("date"), rs.getString("description"));
+                    Notice.getItems().add(noti);
                 }
 
             } catch (SQLException e) {
