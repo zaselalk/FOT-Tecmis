@@ -1,21 +1,14 @@
 package com.fottecmis.Admin;
 
+import java.sql.Connection;
+
 public class AdminController {
-    public void initialize() {
-        // TODO
+    private int admin_id;
+    private Connection connection;
+
+
+    public void initialize(int adminId, Connection connection) {
+        this.admin_id = adminId;
+        this.connection = connection;
     }
-
-    public void onLoginButtonClick() {
-        // TODO
-    }
-
-    public void onRegisterButtonClick() {
-        // TODO
-    }
-
-    public void onLogoutButtonClick() {
-        // TODO
-    }
-
-
 }
