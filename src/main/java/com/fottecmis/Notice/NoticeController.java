@@ -20,8 +20,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Objects;
 
-import static sun.net.www.MimeTable.loadTable;
-
 public class NoticeController {
 
     @FXML
@@ -225,6 +223,6 @@ public class NoticeController {
         }
 //        get notices from database
         return null;
-    }
+   }
 }
 */
