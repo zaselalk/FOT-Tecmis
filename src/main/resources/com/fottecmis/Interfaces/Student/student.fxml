@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.fottecmis.Student.StudentController">
    <children>
       <Text layoutX="237.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student"/>
+      <Button layoutX="83.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewStudentCourse" text="Courses"/>
+      <Button layoutX="191.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewStudentAttendance"
+              text="Attendance"/>
+      <Button layoutX="300.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewStudentGrade" text="Grade"/>
+      <Button layoutX="119.0" layoutY="188.0" mnemonicParsing="false" onAction="#viewStudentTimetable"
+              text="Timetable"/>
+      <Button layoutX="231.0" layoutY="188.0" mnemonicParsing="false" onAction="#viewStudentMedical" text="Medical"/>
    </children>
 </AnchorPane>
