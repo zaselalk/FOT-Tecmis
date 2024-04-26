@@ -5,11 +5,8 @@ import com.fottecmis.Shared.SceneHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -17,8 +14,6 @@ import java.sql.PreparedStatement;
 
 public class AuthController {
     private final AuthDatabaseConnection authDatabaseConnection = new AuthDatabaseConnection();
-    private Stage stage;
-    private Scene scene;
     private Parent parent;
     private Connection connection;
     private int user_id;
@@ -70,12 +65,9 @@ public class AuthController {
     }
 
     public void showLoginScreen(ActionEvent event) throws Exception {
-        Parent loginscene = FXMLLoader.load(getClass().getResource("/com/fottecmis/Interfaces/Authenticate/auth.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(loginscene);
-        stage.setScene(scene);
-        stage.show();
-
+        FXMLLoader loader = SceneHandler.createLoader("Authenticate/auth");
+        Parent root = loader.load();
+        SceneHandler.switchScene(event, root);
     }
 
     public String getUserTypeByEmail(String email_address) {
@@ -108,21 +100,21 @@ public class AuthController {
                 break;
             case "student":
                 try {
-                    showStudentDash(event);
+                    showStudentDashboard(event);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 break;
             case "lecturer":
                 try {
-                    showLecturerDash(event);
+                    showLecturerDashboard(event);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 break;
             case "technical_officer":
                 try {
-                    showTechnicalOfficerDash(event);
+                    showTechnicalOfficerDashboard(event);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -140,28 +132,22 @@ public class AuthController {
         SceneHandler.switchScene(event, root);
     }
 
-    public void showStudentDash(ActionEvent event) throws IOException {
-        Parent loginscene = FXMLLoader.load(getClass().getResource("/com/fottecmis/Interfaces/Student/student.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(loginscene);
-        stage.setScene(scene);
-        stage.show();
+    public void showStudentDashboard(ActionEvent event) throws IOException {
+        FXMLLoader loader = SceneHandler.createLoader("Student/student");
+        Parent stundentScene = loader.load();
+        SceneHandler.switchScene(event, stundentScene);
     }
 
-    public void showLecturerDash(ActionEvent event) throws IOException {
-        Parent loginscene = FXMLLoader.load(getClass().getResource("/com/fottecmis/Interfaces/Lecturer/lecturer.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(loginscene);
-        stage.setScene(scene);
-        stage.show();
+    public void showLecturerDashboard(ActionEvent event) throws IOException {
+        FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecturer");
+        Parent lecturerScene = loader.load();
+        SceneHandler.switchScene(event, lecturerScene);
     }
 
-    public void showTechnicalOfficerDash(ActionEvent event) throws IOException {
-        Parent loginscene = FXMLLoader.load(getClass().getResource("/com/fottecmis/Interfaces/TechnicalOfficer/technical_officer.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(loginscene);
-        stage.setScene(scene);
-        stage.show();
+    public void showTechnicalOfficerDashboard(ActionEvent event) throws IOException {
+        FXMLLoader loader = SceneHandler.createLoader("TechnicalOfficer/technical_officer");
+        Parent technicalOfficerScene = loader.load();
+        SceneHandler.switchScene(event, technicalOfficerScene);
     }
 
 }
