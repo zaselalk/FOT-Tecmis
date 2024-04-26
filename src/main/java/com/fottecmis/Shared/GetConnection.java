@@ -11,7 +11,7 @@ public class GetConnection {
     private void registerConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("Successfully registerd");
+            System.out.println("Successfully registerd on database");
         } catch (ClassNotFoundException e) {
             LOGGER.log(Level.SEVERE, "Error in registering the driver", e);
         }
