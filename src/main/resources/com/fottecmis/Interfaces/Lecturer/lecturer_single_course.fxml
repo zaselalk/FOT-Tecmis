@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.fottecmis.Lecturer.LecturerSingleCourseController">
+
+    <Text layoutX="242.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Single Course"/>
+    <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#showLecturerDashboard" text="Back"/>
+    <Button layoutX="52.0" layoutY="120.0" mnemonicParsing="false" onAction="#showLecturerMaterialPage"
+            prefHeight="72.0" prefWidth="158.0" text="Lecture Materials"/>
+    <Button layoutX="232.0" layoutY="120.0" mnemonicParsing="false" onAction="#showEnrolledStudents" prefHeight="72.0"
+            prefWidth="158.0" text="Enrolled Students"/>
+    <Button layoutX="415.0" layoutY="120.0" mnemonicParsing="false" onAction="#showStudentMarks" prefHeight="72.0"
+            prefWidth="158.0" text="Student Marks"/>
+    <Button layoutX="52.0" layoutY="214.0" mnemonicParsing="false" onAction="#showStudentMedicalReport"
+            prefHeight="72.0" prefWidth="158.0" text="Student Medical"/>
+    <Button layoutX="232.0" layoutY="214.0" mnemonicParsing="false" onAction="#showStudentAttendance" prefHeight="72.0"
+            prefWidth="158.0" text="Student Attendance"/>
+
+</AnchorPane>
