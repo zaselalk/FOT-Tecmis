@@ -1,5 +1,6 @@
 package com.fottecmis.Authenticate;
 
+import com.fottecmis.Admin.AdminController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +20,7 @@ public class AuthController {
     private Scene scene;
     private Parent parent;
     private Connection connection;
+    private int user_id;
 
     @FXML
     private TextField email_address;
@@ -28,7 +30,7 @@ public class AuthController {
 
     public AuthController() {
         try {
-            authDatabaseConnection.getAuthConnection();
+            connection = authDatabaseConnection.getAuthConnection();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -36,12 +38,17 @@ public class AuthController {
 
     boolean authenticateUser(String email_address, String password) {
         try {
-            PreparedStatement pres = connection.prepareStatement("SELECT * FROM users WHERE email_address = ? AND plain_password = ?");
+            PreparedStatement pres = connection.prepareStatement("SELECT user_id FROM users WHERE email_address = ? AND plain_password = ?");
 
             pres.setString(1, email_address);
             pres.setString(2, password);
 
-            return pres.executeQuery().next();
+            if (pres.executeQuery().next()) {
+                user_id = pres.getResultSet().getInt("user_id");
+                return true;
+            } else {
+                return false;
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -125,9 +132,12 @@ public class AuthController {
     }
 
     public void showAdminDash(ActionEvent event) throws IOException {
-        Parent loginscene = FXMLLoader.load(getClass().getResource("/com/fottecmis/Interfaces/Admin/admin.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(loginscene);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/fottecmis/Interfaces/Admin/admin.fxml"));
+        Parent root = loader.load();
+        AdminController admincontroller = loader.getController();
+        admincontroller.initialize(user_id, connection);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
