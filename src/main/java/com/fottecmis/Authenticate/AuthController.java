@@ -1,6 +1,7 @@
 package com.fottecmis.Authenticate;
 
 import com.fottecmis.Admin.AdminController;
+import com.fottecmis.Shared.SceneHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -100,7 +101,7 @@ public class AuthController {
         switch (userType) {
             case "admin":
                 try {
-                    showAdminDash(event);
+                    showAdminDashboard(event);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -131,15 +132,12 @@ public class AuthController {
         }
     }
 
-    public void showAdminDash(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/fottecmis/Interfaces/Admin/admin.fxml"));
+    public void showAdminDashboard(ActionEvent event) throws IOException {
+        FXMLLoader loader = SceneHandler.createLoader("Admin/admin");
         Parent root = loader.load();
         AdminController admincontroller = loader.getController();
         admincontroller.initialize(user_id, connection);
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        SceneHandler.switchScene(event, root);
     }
 
     public void showStudentDash(ActionEvent event) throws IOException {
