@@ -11,7 +11,9 @@
         <Button layoutX="25.0" layoutY="84.0" mnemonicParsing="false" onAction="#showLoginScene" text="Login"/>
         <Button layoutX="98.0" layoutY="84.0" mnemonicParsing="false" onAction="#showEditProfileScene"
                 text="Edit Profile"/>
-        <Button layoutX="31.0" layoutY="147.0" mnemonicParsing="false" onAction="#showStudentDashboardScene"
+        <Button layoutX="25.0" layoutY="206.0" mnemonicParsing="false" onAction="#showStudentDashboardScene"
                 text="Student"/>
+        <Button layoutX="108.0" layoutY="206.0" mnemonicParsing="false" onAction="#showLecturerDashboardScene"
+                text="Lecturer"/>
     </children>
 </AnchorPane>
