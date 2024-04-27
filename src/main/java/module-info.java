@@ -9,6 +9,6 @@ module com.fottecmis.fottecmis {
     opens com.fottecmis.Student to javafx.fxml;
     opens com.fottecmis.TestMap to javafx.fxml;
     opens com.fottecmis.TecnicalOfficer to javafx.fxml;
-
+    opens com.fottecmis.Student.StudentMedical to javafx.fxml, javafx.base;
     exports com.fottecmis;
 }

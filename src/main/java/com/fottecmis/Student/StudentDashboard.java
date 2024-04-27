@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import java.io.IOException;
 
 public class StudentDashboard {
+
+
     public void showStudentDashboard(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student");
         Parent studentDashboardScene = loader.load();

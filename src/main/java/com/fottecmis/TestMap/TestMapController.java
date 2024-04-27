@@ -3,7 +3,6 @@ package com.fottecmis.TestMap;
 import com.fottecmis.Authenticate.AuthController;
 import com.fottecmis.Lecturer.LecturerDashboard;
 import com.fottecmis.Student.EditStudentController;
-import com.fottecmis.Student.StudentDashboard;
 import javafx.event.ActionEvent;
 
 public class TestMapController {
@@ -26,9 +25,9 @@ public class TestMapController {
     }
 
     public void showStudentDashboardScene(ActionEvent event) {
-        StudentDashboard std = new StudentDashboard();
+        AuthController auth = new AuthController();
         try {
-            std.showStudentDashboard(event);
+            auth.showStudentDashboard(event);
         } catch (Exception e) {
             e.printStackTrace();
         }
