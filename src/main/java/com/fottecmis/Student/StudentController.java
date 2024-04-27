@@ -20,6 +20,7 @@ public class StudentController {
 
     }
 
+
     public void viewStudentAttendance(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-attendance");
         Parent studentAttendanceScene = loader.load();
@@ -70,4 +71,13 @@ public class StudentController {
     }
 
 
+    public void viewStudentNotification(ActionEvent event) {
+        try {
+            FXMLLoader loader = SceneHandler.createLoader("Student/notice");
+            Parent studentNotificationScene = loader.load();
+            SceneHandler.switchScene(event, studentNotificationScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
