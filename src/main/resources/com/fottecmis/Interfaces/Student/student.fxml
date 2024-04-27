@@ -3,16 +3,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.fottecmis.Student.StudentController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Student.StudentController">
    <children>
-      <Text layoutX="237.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student"/>
-      <Button layoutX="83.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewStudentCourse" text="Courses"/>
-      <Button layoutX="191.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewStudentAttendance"
-              text="Attendance"/>
-      <Button layoutX="300.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewStudentGrade" text="Grade"/>
-      <Button layoutX="119.0" layoutY="188.0" mnemonicParsing="false" onAction="#viewStudentTimetable"
-              text="Timetable"/>
-      <Button layoutX="231.0" layoutY="188.0" mnemonicParsing="false" onAction="#viewStudentMedical" text="Medical"/>
+      <Text layoutX="267.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student"/>
+      <Button layoutX="81.0" layoutY="186.0" mnemonicParsing="false" onAction="#viewStudentCourse" prefHeight="65.0"
+              prefWidth="125.0" text="Courses"/>
+      <Button layoutX="242.0" layoutY="186.0" mnemonicParsing="false" onAction="#viewStudentAttendance"
+              prefHeight="65.0" prefWidth="125.0" text="Attendance"/>
+      <Button layoutX="403.0" layoutY="186.0" mnemonicParsing="false" onAction="#viewStudentGrade" prefHeight="65.0"
+              prefWidth="139.0" text="Grade"/>
+      <Button layoutX="130.0" layoutY="285.0" mnemonicParsing="false" onAction="#viewStudentTimetable" prefHeight="56.0"
+              prefWidth="152.0" text="Timetable"/>
+      <Button layoutX="342.0" layoutY="285.0" mnemonicParsing="false" onAction="#viewStudentMedical" prefHeight="56.0"
+              prefWidth="158.0" text="Medical"/>
+      <Button layoutX="260.0" layoutY="120.0" mnemonicParsing="false" onAction="#viewStudentProfileEdit"
+              text="Edit Profile"/>
    </children>
 </AnchorPane>

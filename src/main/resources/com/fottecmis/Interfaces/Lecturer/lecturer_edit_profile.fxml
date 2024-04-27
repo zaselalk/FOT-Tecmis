@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.fottecmis.Lecturer.LecturerProfileEditController">
+    <children>
+        <ImageView fitHeight="124.0" fitWidth="168.0" layoutX="59.0" layoutY="88.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../Image/Studentds.png"/>
+            </image>
+        </ImageView>
+        <VBox layoutX="254.0" layoutY="89.0" prefHeight="109.0" prefWidth="268.0">
+            <children>
+                <Label styleClass="lable_padding" text="Name">
+                    <VBox.margin>
+                        <Insets bottom="7.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label text="Department">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="7.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label text="Mail">
+                    <VBox.margin>
+                        <Insets bottom="7.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label text="Contact Numbet">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Line endX="608.0" layoutX="178.0" layoutY="277.0" startX="-118.20001220703125" startY="-1.52587890625E-5"/>
+        <Button layoutX="172.0" layoutY="212.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0"
+                style="-fx-border-radius: 10; -fx-background-color: #364144;" text="Edit Profile Picture"
+                textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/EditIcon.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <TextField layoutX="80.0" layoutY="358.0" prefHeight="26.0" prefWidth="174.0" promptText="Enter new Number"
+                   style="-fx-background-color: E1E1E1; -fx-border-radius: 20;"/>
+        <Text layoutX="71.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Contact Number"
+              wrappingWidth="238.18341064453125">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Text>
+        <TextField layoutX="80.0" layoutY="397.0" prefHeight="26.0" prefWidth="174.0"
+                   promptText="Enter Current Password" style="-fx-background-color: E1E1E1; -fx-border-radius: 20;"/>
+        <Button layoutX="80.0" layoutY="433.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0"
+                style="-fx-background-color: E1E1E1;" text="Save">
+            <graphic>
+                <ImageView fitHeight="18.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/SaveIcon.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Button>
+        <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="1201.0" style="-fx-background-color: #1C5D9D;"/>
+        <AnchorPane prefHeight="54.0" prefWidth="1198.0" style="-fx-background-color: #1C5D9D;"
+                    AnchorPane.bottomAnchor="546.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0"
+                    AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#showLecturerDashboard"
+                        prefHeight="18.0" prefWidth="34.0" style="-fx-background-color: #1C5D9D;">
+                    <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Image/backIcon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Text fill="WHITE" layoutX="54.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Techmis - Faculty of Technology ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Text>
+                <Button layoutX="992.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLecturerDashboard"
+                        style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="1086.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #1C5D9D;"
+                        text="Log out" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
