@@ -13,11 +13,13 @@
               prefHeight="65.0" prefWidth="125.0" text="Attendance"/>
       <Button layoutX="403.0" layoutY="186.0" mnemonicParsing="false" onAction="#viewStudentGrade" prefHeight="65.0"
               prefWidth="139.0" text="Grade"/>
-      <Button layoutX="130.0" layoutY="285.0" mnemonicParsing="false" onAction="#viewStudentTimetable" prefHeight="56.0"
+      <Button layoutX="90.0" layoutY="307.0" mnemonicParsing="false" onAction="#viewStudentTimetable" prefHeight="56.0"
               prefWidth="152.0" text="Timetable"/>
-      <Button layoutX="342.0" layoutY="285.0" mnemonicParsing="false" onAction="#viewStudentMedical" prefHeight="56.0"
+      <Button layoutX="288.0" layoutY="307.0" mnemonicParsing="false" onAction="#viewStudentMedical" prefHeight="56.0"
               prefWidth="158.0" text="Medical"/>
       <Button layoutX="260.0" layoutY="120.0" mnemonicParsing="false" onAction="#viewStudentProfileEdit"
               text="Edit Profile"/>
+      <Button layoutX="965.0" layoutY="39.0" mnemonicParsing="false" onAction="#viewStudentNotification"
+              prefHeight="36.0" prefWidth="164.0" text="Notification"/>
    </children>
 </AnchorPane>

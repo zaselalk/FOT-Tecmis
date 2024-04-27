@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.fottecmis.Student.NoticeController"
-            prefHeight="600.0" prefWidth="1200.0">
-
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane minHeight="600" minWidth="1200" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField layoutX="-3.0" layoutY="-1.0" prefHeight="54.0" prefWidth="1200.0"
+                   style="-fx-background-color: blue;"/>
+        <Button layoutX="1104.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0"
+                style="-fx-background-color: blue;" text="Log out" textFill="WHITE"/>
+        <Text fill="WHITE" layoutX="45.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Techmis|Faculty Of Technology University Of Ruhuna" wrappingWidth="472.643657207489"/>
+        <Text fill="#ea0a0a" layoutX="258.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notices">
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Text>
+        <TableView fx:id="table" layoutX="28.0" layoutY="95.0" prefHeight="397.0" prefWidth="848.0">
+            <columns>
+                <TableColumn fx:id="date" prefWidth="143.0" text="           Date"/>
+                <TableColumn fx:id="description" prefWidth="393.0"
+                             text="                                                              Description"/>
+            </columns>
+        </TableView>
+        <Button layoutX="957.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="147.0"
+                style="-fx-background-color: blue;" text="Dashbord" textFill="WHITE"/>
+        <Text fill="WHITE" layoutX="7.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;&lt;"/>
+    </children>
 </AnchorPane>
