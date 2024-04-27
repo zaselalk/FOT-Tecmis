@@ -101,32 +101,46 @@
       </VBox>
       <AnchorPane layoutX="79.0" layoutY="303.0" prefHeight="258.0" prefWidth="467.0">
          <children>
-            <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#viewStudentCourse" prefHeight="161.0" prefWidth="174.0" style="-fx-background-color: #1C5D9D; -fx-text-alignment: bottom;" text="Courses" textFill="WHITE" wrapText="true" />
-            <Button layoutX="314.0" layoutY="49.0" mnemonicParsing="false" onAction="#viewStudentGrade" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" text="Grade" textFill="WHITE">
+            <Button layoutX="31.0" layoutY="50.0" mnemonicParsing="false" onAction="#viewStudentCourse" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D; -fx-text-alignment: bottom;" textFill="WHITE" wrapText="true">
                <graphic>
-                  <ImageView fitHeight="69.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="67.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/course.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="314.0" layoutY="49.0" mnemonicParsing="false" onAction="#viewStudentGrade" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/grade.png" />
+                     </image></ImageView>
                </graphic>
             </Button>
-            <Button layoutX="97.0" layoutY="142.0" mnemonicParsing="false" onAction="#viewStudentTimetable" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" text="Timetable" textFill="WHITE">
+            <Button layoutX="97.0" layoutY="142.0" mnemonicParsing="false" onAction="#viewStudentTimetable" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" textFill="WHITE">
                <graphic>
-                  <ImageView fitHeight="84.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="69.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/time%20table.png" />
+                     </image></ImageView>
                </graphic>
             </Button>
-            <Button layoutX="252.0" layoutY="143.0" mnemonicParsing="false" onAction="#viewStudentMedical" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" text="Medical" textFill="WHITE">
+            <Button layoutX="252.0" layoutY="143.0" mnemonicParsing="false" onAction="#viewStudentMedical" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" textFill="WHITE">
                <graphic>
-                  <ImageView fitHeight="76.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="76.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/medical.png" />
+                     </image></ImageView>
                </graphic>
             </Button>
-            <Button layoutX="170.0" layoutY="49.0" mnemonicParsing="false" onAction="#viewStudentAttendance" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" text="Attendance" textFill="WHITE">
+            <Button layoutX="170.0" layoutY="49.0" mnemonicParsing="false" onAction="#viewStudentAttendance" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #1C5D9D;" textFill="WHITE">
                <graphic>
-                  <ImageView fitHeight="74.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="72.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Attendense.png" />
+                     </image></ImageView>
                </graphic>
             </Button>
-            <ImageView fitHeight="42.0" fitWidth="89.0" layoutX="76.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Image/CourseImg.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>
