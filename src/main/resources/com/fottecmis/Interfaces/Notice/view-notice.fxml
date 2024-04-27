@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NoticeController">
    <children>
       <TextField layoutX="-3.0" layoutY="-1.0" prefHeight="54.0" prefWidth="603.0" style="-fx-background-color: blue;" />
       <Button layoutX="529.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;" text="About us" textFill="WHITE" />
@@ -20,7 +20,7 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <TableView fx:id="table" layoutX="28.0" layoutY="95.0" prefHeight="251.0" prefWidth="535.0">
+      <TableView fx:id="notice" layoutX="28.0" layoutY="95.0" prefHeight="251.0" prefWidth="535.0">
         <columns>
           <TableColumn fx:id="date" prefWidth="107.19999694824219" text="           Date" />
           <TableColumn fx:id="description" prefWidth="427.2000152587891" text="                                                              Description" />
@@ -29,4 +29,4 @@
       <Button layoutX="341.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: blue;" text="Dashbord" textFill="WHITE" />
       <Text fill="WHITE" layoutX="7.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;&lt;" />
    </children>
-</AnchorPane>
+</fx:root>

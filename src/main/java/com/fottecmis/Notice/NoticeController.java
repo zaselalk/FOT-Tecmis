@@ -1,5 +1,53 @@
 package com.fottecmis.Notice;
 
+import javafx.scene.control.TableView;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class NoticeController  {
+    public TableView<Notice> noticeTableView;
+    private int noticeId;
+    private Connection connection;
+    List<Notice> notices= new ArrayList<>();
+
+    public void initialize(int noticeId,Connection connection){
+        this.noticeId=noticeId;
+        this.connection=connection;
+    }
+
+    public void showNotice(){
+        if(connection==null){
+            System.out.println(noticeId);
+            System.out.println("Connection is null");
+            return;
+        }
+        try{
+            PreparedStatement getNotice = connection.prepareStatement("SELECT date FROM notice;");
+            getNotice.setInt(1, noticeId);
+        }
+
+        if(!getNotice.getResultSet().next()){
+            Notice notice = new Notice();
+            notice.setDate(notice.getResultSet().getDate("date"));
+            notice.setTitle(notice.getResultSet().getString("description"));
+        }
+
+        catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
+}
+
+
+/*package com.fottecmis.Notice;
+
 import com.fottecmis.Shared.DatabaseConnectionException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -97,7 +145,7 @@ public class NoticeController {
             }
         }
     }
-}
+}*/
 
 
 
