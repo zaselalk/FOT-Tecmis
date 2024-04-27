@@ -19,7 +19,7 @@
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-         <Button layoutX="772.0" layoutY="14.0" mnemonicParsing="false" onAction="#showStudentDashboard" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+         <Button layoutX="772.0" layoutY="14.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
@@ -29,9 +29,9 @@
                <Font name="System Bold" size="12.0" />
             </font>
          </Button>
-         <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" onAction="#showStudentDashboard" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
+         <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
                <graphic>
-               <ImageView fitHeight="21.0" fitWidth="20.0" onMouseClicked="#showStudentDashboard" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="21.0" fitWidth="20.0"  pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../Image/backIcon.png" />
                   </image>
@@ -121,7 +121,7 @@
                <graphic>
                   <ImageView fitHeight="69.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Image/time%20table.png" />
+                        <Image url="@../Image/time table.png" />
                      </image></ImageView>
                </graphic>
             </Button>
