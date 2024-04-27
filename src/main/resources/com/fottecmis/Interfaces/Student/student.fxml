@@ -19,7 +19,7 @@
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-         <Button layoutX="772.0" layoutY="14.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+         <Button layoutX="772.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
@@ -29,9 +29,9 @@
                <Font name="System Bold" size="12.0" />
             </font>
          </Button>
-         <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
+         <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
                <graphic>
-               <ImageView fitHeight="21.0" fitWidth="20.0"  pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../Image/backIcon.png" />
                   </image>
@@ -40,7 +40,7 @@
          </Button>
       </children>
    </AnchorPane>
-      <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="950.0" style="-fx-background-color: #3C91E6;" />
+      <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="950.0" style="-fx-background-color: #1C5D9D;" />
 
       <Text fill="RED" layoutX="449.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student">
          <font>
@@ -57,7 +57,17 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button layoutX="791.0" layoutY="89.0" mnemonicParsing="false" onAction="#viewStudentNotification" prefHeight="36.0" prefWidth="118.0" text="Notification" />
+      <Button layoutX="791.0" layoutY="89.0" mnemonicParsing="false" onAction="#viewStudentNotification" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: FF3131; -fx-background-radius: 10px;" text="Notification" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Notice.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <ImageView fitHeight="140.0" fitWidth="189.0" layoutX="218.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Image/Studentds.png" />
