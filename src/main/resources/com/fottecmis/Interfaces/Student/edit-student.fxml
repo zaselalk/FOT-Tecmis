@@ -6,8 +6,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.*?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.fottecmis.Student.EditStudentController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Student.EditStudentController">
     <children>
             <ImageView fitHeight="81.0" fitWidth="129.0" layoutX="111.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
                 <image>
@@ -83,12 +83,16 @@
                     <Font name="System Bold" size="13.0" />
                 </font>
             </Button>
-            <AnchorPane layoutY="391.0" prefHeight="18.0" prefWidth="600.0" style="-fx-background-color: #1C5D9D;" />
-            <AnchorPane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #1C5D9D;">
+        <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="1201.0" style="-fx-background-color: #1C5D9D;"/>
+        <AnchorPane prefHeight="54.0" prefWidth="1198.0" style="-fx-background-color: #1C5D9D;"
+                    AnchorPane.bottomAnchor="546.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0"
+                    AnchorPane.topAnchor="0.0">
                 <children>
-                    <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="34.0" style="-fx-background-color: #1C5D9D;">
+                    <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#showStudentDashboard"
+                            prefHeight="18.0" prefWidth="34.0" style="-fx-background-color: #1C5D9D;">
                         <graphic>
-                            <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <ImageView fitHeight="22.0" fitWidth="18.0" onMouseClicked="#showStudentDashboard"
+                                       pickOnBounds="true" preserveRatio="true">
                                 <image>
                                     <Image url="@../Image/backIcon.png" />
                                 </image>
@@ -100,22 +104,14 @@
                             <Font name="System Bold" size="12.0" />
                         </font>
                     </Text>
-                    <Button layoutX="359.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+                    <Button layoutX="992.0" layoutY="14.0" mnemonicParsing="false" onAction="#showStudentDashboard"
+                            style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
                         <font>
                             <Font name="System Bold" size="12.0" />
                         </font>
                     </Button>
-                    <Button layoutX="427.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
-                        <font>
-                            <Font name="System Bold" size="12.0" />
-                        </font>
-                    </Button>
-                    <Button layoutX="485.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #1C5D9D;" text="FAQ" textFill="WHITE">
-                        <font>
-                            <Font name="System Bold" size="12.0" />
-                        </font>
-                    </Button>
-                    <Button layoutX="525.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #1C5D9D;" text="About us" textFill="WHITE">
+                    <Button layoutX="1086.0" layoutY="12.0" mnemonicParsing="false"
+                            style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
                         <font>
                             <Font name="System Bold" size="12.0" />
                         </font>

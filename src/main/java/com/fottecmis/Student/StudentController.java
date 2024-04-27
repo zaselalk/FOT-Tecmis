@@ -51,6 +51,12 @@ public class StudentController {
         SceneHandler.switchScene(event, studentMedicalScene);
     }
 
+    public void viewStudentProfileEdit(ActionEvent event) throws IOException {
+        FXMLLoader loader = SceneHandler.createLoader("Student/edit-student");
+        Parent studentProfileEditScene = loader.load();
+        SceneHandler.switchScene(event, studentProfileEditScene);
+    }
+
     public void initialize(int userId) {
 
         try {
