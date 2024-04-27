@@ -3,6 +3,7 @@ package com.fottecmis.TestMap;
 import com.fottecmis.Authenticate.AuthController;
 import com.fottecmis.Lecturer.LecturerDashboard;
 import com.fottecmis.Student.EditStudentController;
+import com.fottecmis.TecnicalOfficer.TechnicalOfficerDashboard;
 import javafx.event.ActionEvent;
 
 public class TestMapController {
@@ -41,5 +42,16 @@ public class TestMapController {
             e.printStackTrace();
         }
 
+    }
+
+    //    technical officer
+    public void showTechnicalOfficerDashboardScene(ActionEvent event) {
+        try {
+            TechnicalOfficerDashboard techOfficerDashboard = new TechnicalOfficerDashboard();
+            techOfficerDashboard.showTechnicalOfficerDashboard(event);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
