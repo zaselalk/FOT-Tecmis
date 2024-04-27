@@ -24,7 +24,7 @@ public class GetConnection {
 
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "Error in getting connection", e);
+            System.out.println("Error in getting connection");
             throw new DatabaseConnectionException("Error in getting connection");
         }
     }
