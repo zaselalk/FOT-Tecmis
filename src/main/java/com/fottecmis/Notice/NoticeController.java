@@ -40,6 +40,7 @@ public class NoticeController {
     @FXML
     private Button faq;
 
+
     @FXML
     private Button logout;
 
