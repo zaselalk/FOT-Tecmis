@@ -21,6 +21,7 @@ public class StudentController {
     }
 
 
+
     public void viewStudentAttendance(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-attendance");
         Parent studentAttendanceScene = loader.load();
