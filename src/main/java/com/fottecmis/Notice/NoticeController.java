@@ -1,5 +1,7 @@
 package com.fottecmis.Notice;
 
+import javafx.collections.FXCollections;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 import java.sql.Connection;
@@ -7,42 +9,58 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.*;
 
-public class NoticeController  {
+public class NoticeController {
     public TableView<Notice> noticeTableView;
     private int noticeId;
     private Connection connection;
-    List<Notice> notices= new ArrayList<>();
+    List<Notice> notices = new ArrayList<>();
 
-    public void initialize(int noticeId,Connection connection){
-        this.noticeId=noticeId;
-        this.connection=connection;
+    public void initialize(int noticeId, Connection connection) {
+        this.noticeId = noticeId;
+        this.connection = connection;
     }
 
-    public void showNotice(){
-        if(connection==null){
+    public void showNotice() {
+        if (connection == null) {
             System.out.println(noticeId);
             System.out.println("Connection is null");
             return;
         }
-        try{
+        try {
             PreparedStatement getNotice = connection.prepareStatement("SELECT date FROM notice;");
             getNotice.setInt(1, noticeId);
-        }
 
-        if(!getNotice.getResultSet().next()){
-            Notice notice = new Notice();
-            notice.setDate(notice.getResultSet().getDate("date"));
-            notice.setTitle(notice.getResultSet().getString("description"));
-        }
 
-        catch (SQLException e) {
-            throw new RuntimeException(e);
+            if (!getNotice.executeQuery().next()) {
+                return;
+            }
+
+            while (getNotice.getResultSet().next()) {
+                Notice notice = new Notice();
+                Notice.setdate(getNotice.getResultSet().getDate("date"));
+                Notice.setdescription(getNotice.getResultSet().getString("desription"));
+                System.out.println(Notice.getNoticeid());
+                notice.add(Notice);
+            }
+
+            cretaTableView();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
+    public void createTableView(){
+        TableColumn<Notice, Date> date=new TableColumn<>("date");
+        date.setCellFactory(new propertyValueFactory<>("date"));
 
+        TableColumn<Notice, String> description = new TableColumn<>("descrption");
+        description.setCellFactory(new propertyValueFactory<>("description"));
+        noticeTableView.getColumns().addAll(date, description);
 
+        noticeTableView.setItems(FXCollections.observableList(Notice));
+    }
 }
 
 
