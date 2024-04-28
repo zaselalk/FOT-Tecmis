@@ -29,7 +29,7 @@ public class LecturerSingleCourseController extends LecturerDashboard {
         FXMLLoader loader = SceneHandler.createLoader("Lecturer/student_medical_report");
         Parent studentMedicalReportScene = loader.load();
         LecturerMedicalViewController lecturerMedicalViewController = loader.getController();
-        lecturerMedicalViewController.initialize(connection);
+        lecturerMedicalViewController.initialize(connection, lecturer_id);
         lecturerMedicalViewController.showStudentsMedical();
         SceneHandler.switchScene(event, studentMedicalReportScene);
     }
