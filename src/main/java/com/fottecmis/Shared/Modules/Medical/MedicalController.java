@@ -1,4 +1,4 @@
-package com.fottecmis.Shared.Modules;
+package com.fottecmis.Shared.Modules.Medical;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

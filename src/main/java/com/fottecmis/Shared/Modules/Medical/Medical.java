@@ -1,4 +1,4 @@
-package com.fottecmis.Shared.Modules;
+package com.fottecmis.Shared.Modules.Medical;
 
 public class Medical {
     protected int medical_id;
