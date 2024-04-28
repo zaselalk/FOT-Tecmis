@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Lecturer.LecturerDashboardController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Lecturer.LecturerController">
     <children>
         <ImageView fitHeight="81.0" fitWidth="129.0" layoutX="111.0" layoutY="74.0" pickOnBounds="true"
                    preserveRatio="true">

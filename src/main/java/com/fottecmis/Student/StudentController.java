@@ -1,7 +1,7 @@
 package com.fottecmis.Student;
 
 import com.fottecmis.Shared.SceneHandler;
-import com.fottecmis.Student.StudentMedical.StudentMedicalController;
+import com.fottecmis.Student.StudentMedical.StudentMedicalViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,9 +9,9 @@ import javafx.scene.Parent;
 import java.io.IOException;
 import java.sql.Connection;
 
-public class StudentController {
+public class StudentController extends StudentDashboard {
     private int student_id;
-    private Connection connection;
+//    private Connection connection;
 
     public void viewStudentCourse(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-course");
@@ -19,8 +19,6 @@ public class StudentController {
         SceneHandler.switchScene(event, studentCourseScene);
 
     }
-
-
 
     public void viewStudentAttendance(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-attendance");
@@ -46,7 +44,7 @@ public class StudentController {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-medical");
         Parent studentMedicalScene = loader.load();
 
-        StudentMedicalController studentMedicalController = loader.getController();
+        StudentMedicalViewController studentMedicalController = loader.getController();
 
         studentMedicalController.initialize(student_id, connection);
         studentMedicalController.showStudentMedical();
@@ -69,6 +67,10 @@ public class StudentController {
             e.printStackTrace();
         }
 
+    }
+
+    public void setDatabaseConnection(Connection connection) {
+        this.connection = connection;
     }
 
 

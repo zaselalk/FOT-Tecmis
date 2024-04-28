@@ -1,15 +1,15 @@
-package com.fottecmis.Student.StudentMedical;
+package com.fottecmis.Shared.Modules;
 
-public class StudentMedical {
-    public int medical_id;
-    private int student_id;
-    private int course_id;
-    private String course_name;
-    private int departmentId;
-    private String startDate;
-    private String endDate;
-    private String Description;
-    private String filePath;
+public class Medical {
+    protected int medical_id;
+    protected int student_id;
+    protected int course_id;
+    protected String course_name;
+    protected int departmentId;
+    protected String startDate;
+    protected String endDate;
+    protected String Description;
+    protected String filePath;
 
 
     public int getMedical_id() {

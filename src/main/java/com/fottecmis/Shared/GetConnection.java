@@ -20,11 +20,13 @@ public class GetConnection {
     public Connection getMyConnection(String user, String password) throws DatabaseConnectionException {
         try {
             registerConnection();
-            String url = "jdbc:mysql://mysql-server-tecmis.mysql.database.azure.com:3306/tecmis?useSSL=true&requireSSL=false&serverTimezone=UTC";
+//            String url = "jdbc:mysql://mysql-server-tecmis.mysql.database.azure.com:3306/tecmis?useSSL=true&requireSSL=false&serverTimezone=UTC";
+            String url = "jdbc:mysql://localhost:3306/tecmis";
 
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             System.out.println("Error in getting connection");
+            System.out.println(e);
             throw new DatabaseConnectionException("Error in getting connection");
         }
     }

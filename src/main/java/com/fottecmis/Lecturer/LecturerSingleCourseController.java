@@ -1,11 +1,16 @@
 package com.fottecmis.Lecturer;
 
+import com.fottecmis.Lecturer.LecturerMedical.LecturerMedicalViewController;
 import com.fottecmis.Shared.SceneHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
+import java.sql.Connection;
+
 public class LecturerSingleCourseController extends LecturerDashboard {
+    Connection connection;
+    int lec_id;
     public void showLecturerMaterialPage(ActionEvent event) throws Exception {
         FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecture_material");
         Parent lecturerMaterialScene = loader.load();
@@ -21,6 +26,9 @@ public class LecturerSingleCourseController extends LecturerDashboard {
     public void showStudentMedicalReport(ActionEvent event) throws Exception {
         FXMLLoader loader = SceneHandler.createLoader("Lecturer/student_medical_report");
         Parent studentMedicalReportScene = loader.load();
+        LecturerMedicalViewController lecturerMedicalViewController = loader.getController();
+        lecturerMedicalViewController.initialize(connection);
+        lecturerMedicalViewController.showStudentsMedical();
         SceneHandler.switchScene(event, studentMedicalReportScene);
     }
 
@@ -34,5 +42,12 @@ public class LecturerSingleCourseController extends LecturerDashboard {
         FXMLLoader loader = SceneHandler.createLoader("Lecturer/student_marks");
         Parent studentMarksScene = loader.load();
         SceneHandler.switchScene(event, studentMarksScene);
+    }
+
+
+    void initialize(int lec_id, Connection connection) {
+        this.lec_id = lec_id;
+        this.connection = connection;
+
     }
 }
