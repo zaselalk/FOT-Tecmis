@@ -1,7 +1,7 @@
 package com.fottecmis.Authenticate;
 
 import com.fottecmis.Admin.AdminController;
-import com.fottecmis.Lecturer.LecturerController;
+import com.fottecmis.Lecturer.LecturerCourse.LecturerCourseSelectionViewController;
 import com.fottecmis.Shared.SceneHandler;
 import com.fottecmis.Student.StudentController;
 import javafx.event.ActionEvent;
@@ -145,8 +145,11 @@ public class AuthController {
     public void showLecturerDashboard(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecturer_select_course");
         Parent lecturerScene = loader.load();
-        LecturerController lecturerController = loader.getController();
-        lecturerController.initialize(user_id);
+
+        LecturerCourseSelectionViewController lecturerCourseSelectionViewController = loader.getController();
+        lecturerCourseSelectionViewController.initialize(1);
+        lecturerCourseSelectionViewController.showCourses();
+
         SceneHandler.switchScene(event, lecturerScene);
     }
 

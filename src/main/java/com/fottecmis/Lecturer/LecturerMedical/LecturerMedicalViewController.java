@@ -1,6 +1,6 @@
 package com.fottecmis.Lecturer.LecturerMedical;
 
-import com.fottecmis.Lecturer.LecturerController;
+import com.fottecmis.Lecturer.LecturerDashboard;
 import com.fottecmis.Shared.Modules.Medical.Medical;
 import javafx.collections.FXCollections;
 import javafx.scene.control.TableColumn;
@@ -12,13 +12,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LecturerMedicalViewController extends LecturerController {
+public class LecturerMedicalViewController extends LecturerDashboard {
     public TableView<Medical> medicalTableView;
     List<Medical> studentMedicals = new ArrayList<>();
     private Connection connection;
 
-    public void initialize(Connection connection) {
+    public void initialize(Connection connection, int user_id) {
         this.connection = connection;
+        lecturer_id = user_id;
 
     }
 
