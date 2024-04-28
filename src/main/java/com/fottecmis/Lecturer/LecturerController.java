@@ -11,13 +11,13 @@ public class LecturerController extends LecturerDashboard {
 
     Connection connection;
     int lecturer_id;
-    public void showSingleCourse(ActionEvent event) throws Exception {
-        FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecturer_single_course");
-        Parent lecturerSingleCourseScene = loader.load();
-        LecturerSingleCourseController lecturerSingleCourseController = loader.getController();
-        lecturerSingleCourseController.initialize(lecturer_id, connection);
-        SceneHandler.switchScene(event, lecturerSingleCourseScene);
-    }
+//    public void showSingleCourse(Course course) throws Exception {
+//        FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecturer_single_course");
+//        Parent lecturerSingleCourseScene = loader.load();
+//        LecturerSingleCourseController lecturerSingleCourseController = loader.getController();
+//        lecturerSingleCourseController.initialize(lecturer_id, connection);
+//        SceneHandler.switchScene(event, lecturerSingleCourseScene);
+//    }
 
     public void showEditProfile(ActionEvent event) throws Exception {
         FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecturer_edit_profile");

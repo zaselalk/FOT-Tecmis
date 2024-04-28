@@ -9,6 +9,16 @@ public class Course {
     protected int semester;
     protected int course_hour;
 
+    protected int credit;
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
     public int getCourse_id() {
         return course_id;
     }
