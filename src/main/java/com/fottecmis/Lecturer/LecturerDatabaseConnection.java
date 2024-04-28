@@ -10,7 +10,7 @@ public class LecturerDatabaseConnection {
 
     public Connection getLecturerConnection() throws DatabaseConnectionException {
         String username = "lecturer";
-        String password = "lecturer";
+        String password = "lec123";
         return getConnection.getMyConnection(username, password);
     }
 }

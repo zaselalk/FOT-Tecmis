@@ -11,4 +11,6 @@ module com.fottecmis.fottecmis {
     opens com.fottecmis.TecnicalOfficer to javafx.fxml;
     opens com.fottecmis.Student.StudentMedical to javafx.fxml, javafx.base;
     exports com.fottecmis;
+    opens com.fottecmis.Shared.Modules to javafx.base, javafx.fxml;
+    opens com.fottecmis.Lecturer.LecturerMedical to javafx.fxml;
 }
