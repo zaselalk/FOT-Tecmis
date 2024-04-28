@@ -1,6 +1,6 @@
 package com.fottecmis.Student.StudentMedical;
 
-import com.fottecmis.Shared.Modules.Medical;
+import com.fottecmis.Shared.Modules.Medical.Medical;
 import com.fottecmis.Student.StudentController;
 import javafx.collections.FXCollections;
 import javafx.scene.control.TableColumn;

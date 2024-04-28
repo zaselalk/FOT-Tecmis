@@ -1,6 +1,7 @@
 package com.fottecmis.Student;
 
 import com.fottecmis.Shared.SceneHandler;
+import com.fottecmis.Student.StudentCourse.StudentCourseViewContoller;
 import com.fottecmis.Student.StudentMedical.StudentMedicalViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +17,9 @@ public class StudentController extends StudentDashboard {
     public void viewStudentCourse(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-course");
         Parent studentCourseScene = loader.load();
+        StudentCourseViewContoller studentCourseController = loader.getController();
+        studentCourseController.initialize(student_id, connection);
+        studentCourseController.showStudentMedical();
         SceneHandler.switchScene(event, studentCourseScene);
 
     }

@@ -1,6 +1,6 @@
 package com.fottecmis.Student.StudentMedical;
 
-import com.fottecmis.Shared.Modules.MedicalController;
+import com.fottecmis.Shared.Modules.Medical.MedicalController;
 
 import java.sql.Connection;
 

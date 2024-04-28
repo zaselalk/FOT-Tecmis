@@ -1,7 +1,7 @@
 package com.fottecmis.Lecturer.LecturerMedical;
 
 import com.fottecmis.Lecturer.LecturerController;
-import com.fottecmis.Shared.Modules.Medical;
+import com.fottecmis.Shared.Modules.Medical.Medical;
 import javafx.collections.FXCollections;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
