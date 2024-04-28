@@ -12,7 +12,7 @@ import java.sql.Connection;
 public class LecturerSingleCourseController extends LecturerDashboard {
     Connection connection;
     Course course;
-    int lec_id;
+
     public void showLecturerMaterialPage(ActionEvent event) throws Exception {
         FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecture_material");
         Parent lecturerMaterialScene = loader.load();
@@ -48,11 +48,9 @@ public class LecturerSingleCourseController extends LecturerDashboard {
 
 
     public void initialize(int lec_id, Connection connection, Course course) {
-        this.lec_id = lec_id;
         this.connection = connection;
         this.course = course;
-
-        System.out.println(course.getCourse_name());
+        lecturer_id = lec_id;
 
     }
 }
