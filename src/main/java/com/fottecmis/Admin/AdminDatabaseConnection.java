@@ -10,7 +10,7 @@ public class AdminDatabaseConnection {
 
     public Connection getAdminConnection() throws DatabaseConnectionException {
         String username = "root";
-        String password = "root";
+        String password = "12345";
         return getConnection.getMyConnection(username, password);
     }
 }
