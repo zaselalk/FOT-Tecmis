@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.fottecmis.Admin.AdminCourseController"
-            prefHeight="400.0" prefWidth="600.0">
-    <Text layoutX="282.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Courses"/>
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.fottecmis.Admin.AdminCourses.AdminCourseViewController">
+   <Text layoutX="282.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Courses"/>
 
-    <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#showAdminDashboard" text="Back"/>
+   <Button layoutX="26.0" layoutY="30.0" mnemonicParsing="false" onAction="#showAdminDashboard" text="Back"/>
+   <TableView fx:id="adminCourseView" layoutX="35.0" layoutY="84.0" prefHeight="500.0" prefWidth="732.0"
+              AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="433.0"
+              AnchorPane.topAnchor="84.0"/>
+   <AnchorPane fx:id="courseEditor" layoutX="804.0" layoutY="84.0" prefHeight="487.0" prefWidth="379.0" visible="false">
+      <children>
+         <Button fx:id="delete_button" onAction="#deleteSelectedCourse" layoutX="90.0" layoutY="21.0"
+                 mnemonicParsing="false" prefHeight="24.0" prefWidth="199.0" text="Delete Selected Course"
+                 textFill="#ee5353"/>
+         <Text layoutX="138.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Details"/>
+         <TextField fx:id="course_name" layoutX="33.0" layoutY="132.0" prefHeight="42.0" prefWidth="308.0"
+                    promptText="course name"/>
+         <TextField fx:id="course_hour" layoutX="204.0" layoutY="197.0" prefHeight="31.0" prefWidth="143.0"
+                    promptText="hours"/>
+         <TextField fx:id="course_semester" layoutX="214.0" layoutY="249.0" prefHeight="31.0" prefWidth="123.0"
+                    promptText="semster"/>
+         <TextField fx:id="course_level" layoutX="33.0" layoutY="249.0" prefHeight="31.0" prefWidth="143.0"
+                    promptText="level"/>
+         <Button fx:id="form_action_button" layoutX="121.0" layoutY="368.0" mnemonicParsing="false"
+                 onAction="#actionButtonHandler" prefHeight="31.0" prefWidth="132.0" text="Update"/>
+         <TextField fx:id="course_credit" layoutX="33.0" layoutY="197.0" prefHeight="31.0" prefWidth="143.0"
+                    promptText="credit"/>
+         <Label fx:id="feedback" layoutX="39.0" layoutY="321.0" text="Feedback" visible="false"/>
+      </children>
+   </AnchorPane>
+   <Button fx:id="newCourseButton" layoutX="1002.0" layoutY="17.0" mnemonicParsing="false" onAction="#showNewCourse"
+           prefHeight="42.0" prefWidth="132.0" text="New Course"/>
 
 </AnchorPane>

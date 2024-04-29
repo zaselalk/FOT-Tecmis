@@ -130,7 +130,7 @@ public class AuthController {
         FXMLLoader loader = SceneHandler.createLoader("Admin/admin");
         Parent root = loader.load();
         AdminController admincontroller = loader.getController();
-        admincontroller.initialize(user_id, connection);
+        admincontroller.initialize(user_id);
         SceneHandler.switchScene(event, root);
     }
 

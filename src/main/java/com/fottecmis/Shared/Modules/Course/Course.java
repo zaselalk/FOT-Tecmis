@@ -8,8 +8,16 @@ public class Course {
     protected int level;
     protected int semester;
     protected int course_hour;
-
     protected int credit;
+    protected String course_code;
+
+    public void setCourse_code(String course_code) {
+        this.course_code = course_code;
+    }
+
+    public String getCourse_code() {
+        return course_code;
+    }
 
     public int getCredit() {
         return credit;
@@ -43,8 +51,12 @@ public class Course {
         this.departmentId = departmentId;
     }
 
-    public String getIs_gpa() {
-        return is_gpa;
+    public int getIs_gpa() {
+        if (is_gpa.equals("GPA")) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public void setIs_gpa(int is_gpa) {

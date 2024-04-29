@@ -32,7 +32,7 @@ public class LecturerCourseSelectionViewController extends LecturerController {
 
         courseList.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             try {
-                Course course = new LecturerCourseSelectorController(connection).getCourseIdByName(newValue.toString());
+                Course course = new LecturerCourseSelectorController(connection).getCourseByName(newValue.toString());
                 FXMLLoader loader = SceneHandler.createLoader("Lecturer/lecturer_single_course");
                 Parent lecturerSingleCourseScene = loader.load();
                 LecturerSingleCourseController lecturerSingleCourseController = loader.getController();

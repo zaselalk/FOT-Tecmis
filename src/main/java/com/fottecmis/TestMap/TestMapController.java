@@ -1,6 +1,5 @@
 package com.fottecmis.TestMap;
 
-import com.fottecmis.Admin.AdminController;
 import com.fottecmis.Authenticate.AuthController;
 import com.fottecmis.Student.EditStudentController;
 import com.fottecmis.TecnicalOfficer.TechnicalOfficerDashboard;
@@ -57,8 +56,8 @@ public class TestMapController {
 
     public void showAdminDashboard(ActionEvent event) {
         try {
-            AdminController adminController = new AdminController();
-            adminController.showAdminDashboard(event);
+            AuthController auth = new AuthController();
+            auth.showAdminDashboard(event);
         } catch (Exception e) {
             e.printStackTrace();
         }

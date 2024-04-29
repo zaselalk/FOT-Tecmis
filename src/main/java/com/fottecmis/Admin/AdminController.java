@@ -1,5 +1,6 @@
 package com.fottecmis.Admin;
 
+import com.fottecmis.Admin.AdminCourses.AdminCourseViewController;
 import com.fottecmis.Shared.SceneHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -11,14 +12,22 @@ import java.sql.Connection;
 public class AdminController extends AdminDashboard {
     private int admin_id;
     private Connection connection;
-    public void initialize(int adminId, Connection connection) {
+
+    public void initialize(int adminId) {
         this.admin_id = adminId;
-        this.connection = connection;
+        try {
+            this.connection = new AdminDatabaseConnection().getAdminConnection();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void coursesView(ActionEvent action) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Admin/admin_courses");
         Parent coursesScene = loader.load();
+        AdminCourseViewController adminCourseViewController = loader.getController();
+        adminCourseViewController.initialize(admin_id, connection);
+        adminCourseViewController.showAdminCourses();
         SceneHandler.switchScene(action, coursesScene);
     }
 

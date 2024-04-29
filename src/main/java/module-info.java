@@ -7,6 +7,7 @@ module com.fottecmis.fottecmis {
     opens com.fottecmis.Lecturer to javafx.fxml;
     opens com.fottecmis.Lecturer.LecturerCourse to javafx.fxml;
     opens com.fottecmis.Admin to javafx.fxml;
+    opens com.fottecmis.Admin.AdminCourses to javafx.fxml;
     opens com.fottecmis.Student to javafx.fxml;
     opens com.fottecmis.TestMap to javafx.fxml;
     opens com.fottecmis.TecnicalOfficer to javafx.fxml;
