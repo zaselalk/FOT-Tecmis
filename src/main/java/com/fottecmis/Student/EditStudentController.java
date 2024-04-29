@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class EditStudentController {
+public class EditStudentController extends StudentDashboard {
     private Stage stage;
     private Scene scene;
 

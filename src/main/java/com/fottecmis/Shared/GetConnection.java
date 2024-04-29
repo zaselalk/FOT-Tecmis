@@ -11,7 +11,7 @@ public class GetConnection {
     private void registerConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("Successfully registerd");
+            System.out.println("Successfully registerd on database");
         } catch (ClassNotFoundException e) {
             LOGGER.log(Level.SEVERE, "Error in registering the driver", e);
         }
@@ -20,11 +20,13 @@ public class GetConnection {
     public Connection getMyConnection(String user, String password) throws DatabaseConnectionException {
         try {
             registerConnection();
-            String url = "jdbc:mysql://mysql-server-tecmis.mysql.database.azure.com:3306/tecmis?useSSL=true&requireSSL=false&serverTimezone=UTC";
+//            String url = "jdbc:mysql://mysql-server-tecmis.mysql.database.azure.com:3306/tecmis?useSSL=true&requireSSL=false&serverTimezone=UTC";
+            String url = "jdbc:mysql://localhost:3306/tecmis";
 
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
-            LOGGER.log(Level.SEVERE, "Error in getting connection", e);
+            System.out.println("Error in getting connection");
+            System.out.println(e);
             throw new DatabaseConnectionException("Error in getting connection");
         }
     }

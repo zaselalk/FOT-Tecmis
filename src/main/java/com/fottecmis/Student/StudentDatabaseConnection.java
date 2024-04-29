@@ -8,9 +8,9 @@ import java.sql.Connection;
 public class StudentDatabaseConnection {
     private final GetConnection getConnection = new GetConnection();
 
-    public Connection getLecturerConnection() throws DatabaseConnectionException {
+    public Connection getStudentDBConnection() throws DatabaseConnectionException {
         String username = "student";
-        String password = "stdpass123";
+        String password = "stu123";
         return getConnection.getMyConnection(username, password);
     }
 }
