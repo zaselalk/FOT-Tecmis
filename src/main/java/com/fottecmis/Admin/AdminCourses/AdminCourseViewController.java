@@ -115,7 +115,8 @@ public class AdminCourseViewController extends AdminDashboard {
         clearFields();
         courseEditor.setVisible(true);
         form_action_button.setText("Add Course");
-        delete_button.setVisible(false);
+        delete_button.setVisible(false);    //default
+//        delete_button.setVisible(true);
 
     }
 
@@ -130,6 +131,7 @@ public class AdminCourseViewController extends AdminDashboard {
     public void createCourse() {
 //        hide feedback label
         feedback.setVisible(false);
+//        feedback.setVisible(true);
 
 
         Course newCourse = new Course();
@@ -151,6 +153,7 @@ public class AdminCourseViewController extends AdminDashboard {
             feedback.setText("Course added successfully");
             showAdminCourses();
             clearFields();
+
         } catch (Exception e) {
             feedback.setVisible(true);
             feedback.setStyle("-fx-text-fill: red");
