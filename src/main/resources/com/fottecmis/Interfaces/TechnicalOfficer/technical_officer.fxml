@@ -10,30 +10,27 @@
 <AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: cyan;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.TecnicalOfficer.TechnicalOfficerController">
     <AnchorPane prefHeight="55.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <children>
-            <Text fill="WHITE" layoutX="54.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Techmis - Faculty of Technology University of Ruhuna ">
+            <Text fill="WHITE" layoutX="64.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Techmis - Faculty of Technology University of Ruhuna ">
                 <font>
                     <Font name="System Bold" size="12.0" />
                 </font>
             </Text>
-            <Button layoutX="772.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+            <Button layoutX="984.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
                 <font>
                     <Font name="System Bold" size="12.0" />
                 </font>
             </Button>
-            <Button layoutX="850.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
+            <Button layoutX="1108.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
                 <font>
                     <Font name="System Bold" size="12.0" />
                 </font>
             </Button>
-            <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
-                <graphic>
-                    <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../Image/backIcon.png" />
-                        </image>
-                    </ImageView>
-                </graphic>
-            </Button>
+            <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;" />
+              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../Image/backIcon.png" />
+                  </image>
+              </ImageView>
         </children>
     </AnchorPane>
     <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;" />
