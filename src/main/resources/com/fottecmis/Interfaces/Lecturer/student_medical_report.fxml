@@ -9,7 +9,7 @@
 
     <Text layoutX="282.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Submitted Medical"/>
 
-    <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#showLecturerDashboard" text="Back"/>
+    <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToCourse" text="Back"/>
     <TableView fx:id="medicalTableView" layoutX="52.0" layoutY="86.0" prefHeight="218.0" prefWidth="438.0"/>
 
 </AnchorPane>

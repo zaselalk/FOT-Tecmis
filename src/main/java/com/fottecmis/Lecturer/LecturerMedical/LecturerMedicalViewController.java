@@ -15,7 +15,6 @@ import java.util.List;
 public class LecturerMedicalViewController extends LecturerDashboard {
     public TableView<Medical> medicalTableView;
     List<Medical> studentMedicals = new ArrayList<>();
-    private Connection connection;
 
     public void initialize(Connection connection, int user_id) {
         this.connection = connection;

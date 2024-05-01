@@ -14,7 +14,6 @@ import java.sql.Connection;
 
 public class StudentController extends StudentDashboard {
     private int student_id;
-//    private Connection connection;
 
     public void viewStudentCourse(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-course");
