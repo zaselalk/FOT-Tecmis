@@ -12,10 +12,12 @@ module com.fottecmis.fottecmis {
     opens com.fottecmis.TestMap to javafx.fxml;
     opens com.fottecmis.TecnicalOfficer to javafx.fxml;
     opens com.fottecmis.Student.StudentMedical to javafx.fxml, javafx.base;
-    exports com.fottecmis;
-//    opens com.fottecmis.Shared.Modules to javafx.base, javafx.fxml;
     opens com.fottecmis.Lecturer.LecturerMedical to javafx.fxml;
     opens com.fottecmis.Student.StudentCourse to javafx.fxml;
     opens com.fottecmis.Shared.Modules.Course to javafx.base, javafx.fxml;
     opens com.fottecmis.Shared.Modules.Medical to javafx.base, javafx.fxml;
+    opens com.fottecmis.Shared.Modules.Notice to javafx.base, javafx.fxml;
+    opens com.fottecmis.Admin.AdminNotice to javafx.fxml;
+
+    exports com.fottecmis;
 }

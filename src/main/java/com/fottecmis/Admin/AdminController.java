@@ -1,6 +1,8 @@
 package com.fottecmis.Admin;
 
+
 import com.fottecmis.Admin.AdminCourses.AdminCourseViewController;
+import com.fottecmis.Admin.AdminNotice.AdminNoticeViewController;
 import com.fottecmis.Shared.SceneHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -34,6 +36,9 @@ public class AdminController extends AdminDashboard {
     public void noticeView(ActionEvent action) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Admin/admin_notice");
         Parent noticeScene = loader.load();
+        AdminNoticeViewController adminNoticeViewController = loader.getController();
+        adminNoticeViewController.initialize(connection);
+        adminNoticeViewController.showAdminNotices();
         SceneHandler.switchScene(action, noticeScene);
     }
 
