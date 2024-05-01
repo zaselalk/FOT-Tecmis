@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.fottecmis.Student.StudentAttendanceController">
+            fx:controller="com.fottecmis.Student.StudentAttendance.StudentAttendaceViewController">
     <children>
         <Text layoutX="261.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses"/>
         <Button layoutX="31.0" layoutY="22.0" mnemonicParsing="false" onAction="#showStudentDashboard" text="Back"/>
+        <TableView fx:id="course_table_view" layoutX="45.0" layoutY="164.0" prefHeight="297.0" prefWidth="359.0"/>
+        <TableView fx:id="attendance_table_view" layoutX="535.0" layoutY="121.0" prefHeight="466.0" prefWidth="402.0">
+            <columns>
+                <TableColumn fx:id="attendanceId" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="attendanceDate" prefWidth="168.0" text="Date"/>
+                <TableColumn fx:id="attendanceStatus" prefWidth="158.0" text="Status"/>
+            </columns>
+        </TableView>
+        <Text layoutX="56.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Select Course to view Attendance"/>
     </children>
 </AnchorPane>
