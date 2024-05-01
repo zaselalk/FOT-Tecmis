@@ -33,7 +33,6 @@ public class LecturerDashboard {
 
         if (connection == null) {
             System.out.println("No connection");
-//            showLecturerDashboard(event);
             return;
         }
 
