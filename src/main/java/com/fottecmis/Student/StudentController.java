@@ -1,6 +1,7 @@
 package com.fottecmis.Student;
 
 import com.fottecmis.Shared.SceneHandler;
+import com.fottecmis.Student.StudentAttendance.StudentAttendaceViewController;
 import com.fottecmis.Student.StudentCourse.StudentCourseViewContoller;
 import com.fottecmis.Student.StudentMedical.StudentMedicalViewController;
 import com.fottecmis.Student.StudentNotice.StudentNoticeViewController;
@@ -22,21 +23,20 @@ public class StudentController extends StudentDashboard {
         studentCourseController.initialize(student_id, connection);
         studentCourseController.showStudentMedical();
         SceneHandler.switchScene(event, studentCourseScene);
-
     }
-
     public void viewStudentAttendance(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-attendance");
         Parent studentAttendanceScene = loader.load();
+        StudentAttendaceViewController studentAttendanceController = loader.getController();
+        studentAttendanceController.initialize(connection, student_id);
+        studentAttendanceController.showStudentCourse();
         SceneHandler.switchScene(event, studentAttendanceScene);
-
     }
 
     public void viewStudentGrade(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-grade");
         Parent studentGradeScene = loader.load();
         SceneHandler.switchScene(event, studentGradeScene);
-
     }
 
     public void viewStudentTimetable(ActionEvent event) throws IOException {
@@ -48,9 +48,7 @@ public class StudentController extends StudentDashboard {
     public void viewStudentMedical(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-medical");
         Parent studentMedicalScene = loader.load();
-
         StudentMedicalViewController studentMedicalController = loader.getController();
-
         studentMedicalController.initialize(student_id, connection);
         studentMedicalController.showStudentMedical();
         SceneHandler.switchScene(event, studentMedicalScene);
@@ -65,7 +63,7 @@ public class StudentController extends StudentDashboard {
     public void initialize(int userId) {
 
         try {
-            student_id = userId;
+            student_id = 1;
             connection = new StudentDatabaseConnection().getStudentDBConnection();
 
         } catch (Exception e) {
@@ -73,12 +71,9 @@ public class StudentController extends StudentDashboard {
         }
 
     }
-
     public void setDatabaseConnection(Connection connection) {
         this.connection = connection;
     }
-
-
     public void viewStudentNotification(ActionEvent event) {
         try {
             FXMLLoader loader = SceneHandler.createLoader("Student/notice");

@@ -21,7 +21,6 @@ public class StudentCourseViewContoller extends StudentController {
     public void initialize(int user_id, Connection connection) {
         this.student_id = 1;
         this.connection = connection;
-
     }
 
     public void showStudentMedical() {

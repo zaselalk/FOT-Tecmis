@@ -15,10 +15,13 @@ module com.fottecmis.fottecmis {
     opens com.fottecmis.Lecturer.LecturerMedical to javafx.fxml;
     opens com.fottecmis.Student.StudentCourse to javafx.fxml;
     opens com.fottecmis.Student.StudentNotice to javafx.fxml;
+    opens com.fottecmis.Student.StudentAttendance to javafx.fxml;
     opens com.fottecmis.Shared.Modules.Course to javafx.base, javafx.fxml;
     opens com.fottecmis.Shared.Modules.Medical to javafx.base, javafx.fxml;
     opens com.fottecmis.Shared.Modules.Notice to javafx.base, javafx.fxml;
+    opens com.fottecmis.Shared.Modules.Attendance to javafx.base, javafx.fxml;
     opens com.fottecmis.Admin.AdminNotice to javafx.fxml;
 
     exports com.fottecmis;
+
 }
