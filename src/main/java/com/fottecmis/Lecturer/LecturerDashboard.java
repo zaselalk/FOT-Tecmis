@@ -30,10 +30,8 @@ public class LecturerDashboard {
     }
 
     public void backToCourse(ActionEvent event) throws Exception {
-
         if (connection == null) {
             System.out.println("No connection");
-//            showLecturerDashboard(event);
             return;
         }
 
