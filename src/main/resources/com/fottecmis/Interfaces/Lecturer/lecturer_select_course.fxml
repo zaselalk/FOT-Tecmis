@@ -17,7 +17,7 @@
             </image>
         </ImageView>
         <Text layoutX="282.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecturer"/>
-        <Button layoutX="309.0" layoutY="123.0" mnemonicParsing="false" onAction="#showEditProfile" text="Edit"/>
+        <Button layoutX="309.0" layoutY="123.0" mnemonicParsing="false" text="Edit"/>
         <ListView fx:id="courseList" editable="true" layoutX="153.0" layoutY="287.0" prefHeight="208.0"
                   prefWidth="396.0"/>
     </children>
