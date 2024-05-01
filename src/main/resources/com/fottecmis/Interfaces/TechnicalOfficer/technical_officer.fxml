@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: cyan;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.TecnicalOfficer.TechnicalOfficerController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.TecnicalOfficer.TechnicalOfficerController">
     <AnchorPane prefHeight="55.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <children>
             <Text fill="WHITE" layoutX="64.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Techmis - Faculty of Technology University of Ruhuna ">
@@ -38,7 +38,7 @@
       <font>
          <Font name="System Bold" size="24.0" />
       </font></Text>
-    <Button layoutX="244.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="73.0" prefWidth="144.0" text="Attendance" textFill="#2b179e">
+    <Button graphicTextGap="10.0" layoutX="244.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="74.0" prefWidth="144.0" text="Attendance" textFill="#2b179e">
       <font>
          <Font name="System Bold Italic" size="14.0" />
       </font></Button>
