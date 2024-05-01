@@ -41,15 +41,15 @@
       <font>
          <Font name="System Bold" size="24.0" />
       </font></Text>
-    <Button layoutX="199.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="73.0" prefWidth="144.0" text="Attendance" textFill="#2b179e">
+    <Button layoutX="244.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="73.0" prefWidth="144.0" text="Attendance" textFill="#2b179e">
       <font>
          <Font name="System Bold Italic" size="14.0" />
       </font></Button>
-    <Button layoutX="512.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewMedical" prefHeight="73.0" prefWidth="144.0" text="Medical" textAlignment="CENTER" textFill="#2b179e">
+    <Button layoutX="567.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewMedical" prefHeight="73.0" prefWidth="144.0" text="Medical" textAlignment="CENTER" textFill="#2b179e">
       <font>
          <Font name="System Bold Italic" size="14.0" />
       </font></Button>
-    <Button layoutX="848.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewTimeTable" prefHeight="73.0" prefWidth="144.0" text="Time Table" textAlignment="RIGHT" textFill="#2b179e">
+    <Button layoutX="915.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewTimeTable" prefHeight="73.0" prefWidth="144.0" text="Time Table" textAlignment="RIGHT" textFill="#2b179e">
       <font>
          <Font name="System Bold Italic" size="14.0" />
       </font></Button>
