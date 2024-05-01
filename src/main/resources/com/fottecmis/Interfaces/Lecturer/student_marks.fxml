@@ -6,7 +6,7 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.fottecmis.Lecturer.LecturerStudentMarksController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="600.0" prefWidth="1200.0">
     <Text layoutX="282.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lectur Material"/>
 
     <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToCourse" text="Back"/>

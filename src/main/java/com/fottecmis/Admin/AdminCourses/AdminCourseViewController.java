@@ -58,7 +58,6 @@ public class AdminCourseViewController extends AdminDashboard {
                 form_action_button.setText("Update Course");
                 delete_button.setVisible(true);
             }
-
         });
     }
 
@@ -110,7 +109,6 @@ public class AdminCourseViewController extends AdminDashboard {
         adminCourseView.getColumns().addAll(courseId, courseName, courseLevel, courseSemester, courseCredit, courseHour);
 
     }
-
     public void showNewCourse() {
         clearFields();
         courseEditor.setVisible(true);
@@ -118,7 +116,6 @@ public class AdminCourseViewController extends AdminDashboard {
         delete_button.setVisible(false);
 
     }
-
     public void actionButtonHandler() {
         if (form_action_button.getText().equals("Add Course")) {
             createCourse();
@@ -126,7 +123,6 @@ public class AdminCourseViewController extends AdminDashboard {
             updateCourse();
         }
     }
-
     public void createCourse() {
 //        hide feedback label
         feedback.setVisible(false);
@@ -158,8 +154,6 @@ public class AdminCourseViewController extends AdminDashboard {
             e.printStackTrace();
         }
     }
-
-
     public void updateCourse() {
         //hide feedback label
         feedback.setVisible(false);
@@ -188,7 +182,6 @@ public class AdminCourseViewController extends AdminDashboard {
             e.printStackTrace();
         }
     }
-
     //    delete course
     public void deleteSelectedCourse() {
         //hide feedback label
@@ -213,7 +206,6 @@ public class AdminCourseViewController extends AdminDashboard {
             e.printStackTrace();
         }
     }
-
     private void clearFields() {
         course_name.clear();
         course_credit.clear();
