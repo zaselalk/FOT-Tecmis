@@ -3,6 +3,7 @@ package com.fottecmis.Student;
 import com.fottecmis.Shared.SceneHandler;
 import com.fottecmis.Student.StudentCourse.StudentCourseViewContoller;
 import com.fottecmis.Student.StudentMedical.StudentMedicalViewController;
+import com.fottecmis.Student.StudentNotice.StudentNoticeViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -82,6 +83,9 @@ public class StudentController extends StudentDashboard {
         try {
             FXMLLoader loader = SceneHandler.createLoader("Student/notice");
             Parent studentNotificationScene = loader.load();
+            StudentNoticeViewController studentNoticeViewController = loader.getController();
+            studentNoticeViewController.initialize(connection);
+            studentNoticeViewController.showStudentNotices();
             SceneHandler.switchScene(event, studentNotificationScene);
         } catch (IOException e) {
             e.printStackTrace();
