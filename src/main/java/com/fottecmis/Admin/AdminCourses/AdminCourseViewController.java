@@ -62,6 +62,7 @@ public class AdminCourseViewController extends AdminDashboard {
         });
     }
 
+
     public void showAdminCourses() {
         try {
             Courses = new AdminCourseController(connection).getAllCourses();
@@ -116,7 +117,6 @@ public class AdminCourseViewController extends AdminDashboard {
         form_action_button.setText("Add Course");
         delete_button.setVisible(false);
 
-
     }
 
     public void actionButtonHandler() {
@@ -165,7 +165,7 @@ public class AdminCourseViewController extends AdminDashboard {
         feedback.setVisible(false);
         Course selectedCourse = adminCourseView.getSelectionModel().getSelectedItem();
         if (selectedCourse == null) {
-            System.out.println("No course selected");
+            System.out.println("No notice selected");
             return;
         }
         try {

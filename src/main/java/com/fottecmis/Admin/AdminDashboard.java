@@ -12,6 +12,8 @@ public class AdminDashboard {
     public void showAdminDashboard(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Admin/admin");
         Parent adminDashboardScene = loader.load();
+        AdminController adminController = loader.getController();
+        adminController.initialize(1);
         SceneHandler.switchScene(event, adminDashboardScene);
     }
 }
