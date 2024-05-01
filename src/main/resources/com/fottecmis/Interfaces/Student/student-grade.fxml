@@ -3,17 +3,50 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Student.StudentGradeController">
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Student.StudentGradeController">
     <children>
-        <Text layoutX="439.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Grade"/>
-        <Button layoutX="58.0" layoutY="28.0" mnemonicParsing="false" onAction="#showStudentDashboard" text="Back"/>
+        <AnchorPane prefHeight="55.0" prefWidth="950.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="WHITE" layoutX="54.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Techmis - Faculty of Technology University of Ruhuna ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Button layoutX="772.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="850.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" onAction="#showStudentDashboard" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
+                    <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Image/backIcon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="950.0" style="-fx-background-color: #1C5D9D;" />
+
+        <Text layoutX="461.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Grade" />
+        <Button layoutX="68.0" layoutY="128.0" mnemonicParsing="false" onAction="#showStudentDashboard" text="Back" />
         <TableView layoutX="137.0" layoutY="155.0" prefHeight="391.0" prefWidth="743.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="C1"/>
-                <TableColumn prefWidth="129.0" text="C2"/>
+                <TableColumn prefWidth="514.4000091552734" text="Course" />
+                <TableColumn prefWidth="228.800048828125" text="Grade" />
             </columns>
         </TableView>
     </children>
