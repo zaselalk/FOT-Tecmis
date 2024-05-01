@@ -36,6 +36,7 @@ public class TestMapController {
     public void showLecturerDashboardScene(ActionEvent event) {
         AuthController auth = new AuthController();
         try {
+            auth.setUser_id(1);
             auth.showLecturerDashboard(event);
         } catch (Exception e) {
             e.printStackTrace();

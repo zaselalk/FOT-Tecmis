@@ -6,7 +6,7 @@ import com.fottecmis.Shared.Modules.Course.CourseController;
 import java.sql.Connection;
 
 public class LecturerCourseSelectorController extends CourseController {
-    protected LecturerCourseSelectorController(Connection connection) {
+    public LecturerCourseSelectorController(Connection connection) {
         super(connection);
     }
 }

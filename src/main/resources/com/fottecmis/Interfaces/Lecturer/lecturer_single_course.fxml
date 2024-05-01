@@ -7,7 +7,6 @@
             fx:controller="com.fottecmis.Lecturer.LecturerSingleCourseController">
 
     <Text layoutX="242.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Single Course"/>
-    <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#showLecturerDashboard" text="Back"/>
     <Button layoutX="52.0" layoutY="120.0" mnemonicParsing="false" onAction="#showLecturerMaterialPage"
             prefHeight="72.0" prefWidth="158.0" text="Lecture Materials"/>
     <Button layoutX="232.0" layoutY="120.0" mnemonicParsing="false" onAction="#showEnrolledStudents" prefHeight="72.0"

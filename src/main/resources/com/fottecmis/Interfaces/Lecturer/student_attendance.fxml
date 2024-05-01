@@ -9,6 +9,6 @@
             prefHeight="400.0" prefWidth="600.0">
     <Text layoutX="282.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Attendance"/>
 
-    <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#showLecturerDashboard" text="Back"/>
+    <Button layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToCourse" text="Back"/>
 
 </AnchorPane>

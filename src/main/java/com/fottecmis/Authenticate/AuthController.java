@@ -147,7 +147,7 @@ public class AuthController {
         Parent lecturerScene = loader.load();
 
         LecturerCourseSelectionViewController lecturerCourseSelectionViewController = loader.getController();
-        lecturerCourseSelectionViewController.initialize(1);
+        lecturerCourseSelectionViewController.initialize(user_id);
         lecturerCourseSelectionViewController.showCourses();
 
         SceneHandler.switchScene(event, lecturerScene);
@@ -157,6 +157,11 @@ public class AuthController {
         FXMLLoader loader = SceneHandler.createLoader("TechnicalOfficer/technical_officer");
         Parent technicalOfficerScene = loader.load();
         SceneHandler.switchScene(event, technicalOfficerScene);
+    }
+
+    //    set user id manaully
+    public void setUser_id(int userId) {
+        this.user_id = userId;
     }
 
 }
