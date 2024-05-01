@@ -24,7 +24,8 @@
                         <Font name="System Bold" size="12.0" />
                     </font>
                 </Button>
-                <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" onAction="#showLecturerDashboard" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
+                <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" onAction="#backToCourse" prefHeight="30.0"
+                        prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
                     <graphic>
                         <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
