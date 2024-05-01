@@ -14,6 +14,7 @@
     <children>
         <AnchorPane prefHeight="55.0" prefWidth="950.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
+
                 <Text fill="WHITE" layoutX="54.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Techmis - Faculty of Technology University of Ruhuna ">
                     <font>
                         <Font name="System Bold" size="12.0" />
