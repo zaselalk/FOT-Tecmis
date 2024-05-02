@@ -30,22 +30,22 @@
    </Text>
    <ImageView id="#myImage" fitHeight="80.0" fitWidth="88.0" layoutX="39.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: ellips;">
       <image>
-         <Image url="@../../../images/admin.png" />
+         <Image url="@../../../../images/admin.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="160.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../images/student.png" />
+         <Image url="@../../../../images/student.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="282.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../images/lecture.png" />
+         <Image url="@../../../../images/lecture.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="677.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="130.0" fitWidth="119.0" layoutX="189.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../images/logo.png" />
+         <Image url="@../../../../images/logo.png" />
       </image>
    </ImageView>
    <Text fill="#0b132b" layoutX="658.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN PORTAL" wrappingWidth="102.40000000000009">
