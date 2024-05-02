@@ -44,9 +44,11 @@ public class StudentController extends StudentDashboard {
         SceneHandler.switchScene(event, studentAttendanceScene);
     }
 
-    public void viewStudentGrade(ActionEvent event) throws IOException {
+    public void viewStudentGrade(ActionEvent event) throws IOException, SQLException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-grade");
         Parent studentGradeScene = loader.load();
+        StudentGradeController studentGradeController = loader.getController();
+        studentGradeController.initialize(connection, student_id);
         SceneHandler.switchScene(event, studentGradeScene);
     }
 

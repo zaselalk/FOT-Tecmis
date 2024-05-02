@@ -27,7 +27,9 @@ public class TestMapController {
     public void showStudentDashboardScene(ActionEvent event) {
         AuthController auth = new AuthController();
         try {
+            auth.setUser_id(1);
             auth.showStudentDashboard(event);
+
 
         } catch (Exception e) {
             e.printStackTrace();
