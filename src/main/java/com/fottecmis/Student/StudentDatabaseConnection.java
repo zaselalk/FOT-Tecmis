@@ -9,8 +9,8 @@ public class StudentDatabaseConnection {
     private final GetConnection getConnection = new GetConnection();
 
     public Connection getStudentDBConnection() throws DatabaseConnectionException {
-        String username = "student";
-        String password = "stu123";
+        String username = "root";
+        String password = "1234";
         return getConnection.getMyConnection(username, password);
     }
 }
