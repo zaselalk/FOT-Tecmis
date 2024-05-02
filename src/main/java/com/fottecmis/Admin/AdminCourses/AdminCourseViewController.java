@@ -61,7 +61,6 @@ public class AdminCourseViewController extends AdminDashboard {
         });
     }
 
-
     public void showAdminCourses() {
         try {
             Courses = new AdminCourseController(connection).getAllCourses();

@@ -1,19 +1,31 @@
 package com.fottecmis.Student;
 
+import com.fottecmis.Shared.DatabaseConnectionException;
+import com.fottecmis.Shared.Modules.Student.Student;
+import com.fottecmis.Shared.Modules.Student.StudentDBController;
 import com.fottecmis.Shared.SceneHandler;
 import com.fottecmis.Student.StudentAttendance.StudentAttendaceViewController;
 import com.fottecmis.Student.StudentCourse.StudentCourseViewContoller;
 import com.fottecmis.Student.StudentMedical.StudentMedicalViewController;
 import com.fottecmis.Student.StudentNotice.StudentNoticeViewController;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 public class StudentController extends StudentDashboard {
     private int student_id;
+    @FXML
+    private Label std_name;
+    @FXML
+    private Label std_department;
+    private Student student;
+
 
     public void viewStudentCourse(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student-course");
@@ -53,17 +65,37 @@ public class StudentController extends StudentDashboard {
         SceneHandler.switchScene(event, studentMedicalScene);
     }
 
-    public void viewStudentProfileEdit(ActionEvent event) throws IOException {
+    public void viewStudentProfileEdit(ActionEvent event) throws IOException, DatabaseConnectionException, SQLException {
         FXMLLoader loader = SceneHandler.createLoader("Student/edit-student");
         Parent studentProfileEditScene = loader.load();
+        EditStudentController editStudentController = loader.getController();
+        // get student details
+        StudentDBController studentDBController = new StudentDBController(connection);
+        Student student = studentDBController.getStudentById(student_id);
+        if (student != null) {
+            this.std_name.setText(student.name);
+            this.std_department.setText(student.department);
+        }
+
+        editStudentController.initialize(student, connection);
         SceneHandler.switchScene(event, studentProfileEditScene);
     }
 
     public void initialize(int userId) {
 
         try {
-            student_id = 1;
+            student_id = userId;
             connection = new StudentDatabaseConnection().getStudentDBConnection();
+
+            // get student details
+            StudentDBController studentDBController = new StudentDBController(connection);
+            Student student = studentDBController.getStudentById(student_id);
+            if (student != null) {
+                this.std_name.setText(student.name);
+                this.std_department.setText(student.department);
+            }
+
+
 
         } catch (Exception e) {
             e.printStackTrace();

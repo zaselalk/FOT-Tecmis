@@ -10,6 +10,8 @@ import java.sql.Connection;
 
 public class StudentDashboard {
     Connection connection;
+    String name;
+    String department;
     public void showStudentDashboard(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("Student/student");
         Parent studentDashboardScene = loader.load();
