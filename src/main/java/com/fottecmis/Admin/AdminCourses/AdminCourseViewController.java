@@ -58,10 +58,8 @@ public class AdminCourseViewController extends AdminDashboard {
                 form_action_button.setText("Update Course");
                 delete_button.setVisible(true);
             }
-
         });
     }
-
 
     public void showAdminCourses() {
         try {
@@ -110,15 +108,14 @@ public class AdminCourseViewController extends AdminDashboard {
         adminCourseView.getColumns().addAll(courseId, courseName, courseLevel, courseSemester, courseCredit, courseHour);
 
     }
-
     public void showNewCourse() {
         clearFields();
         courseEditor.setVisible(true);
         form_action_button.setText("Add Course");
-        delete_button.setVisible(false);
+        delete_button.setVisible(false);    //default
+//        delete_button.setVisible(true);
 
     }
-
     public void actionButtonHandler() {
         if (form_action_button.getText().equals("Add Course")) {
             createCourse();
@@ -126,10 +123,10 @@ public class AdminCourseViewController extends AdminDashboard {
             updateCourse();
         }
     }
-
     public void createCourse() {
 //        hide feedback label
         feedback.setVisible(false);
+//        feedback.setVisible(true);
 
 
         Course newCourse = new Course();
@@ -151,6 +148,7 @@ public class AdminCourseViewController extends AdminDashboard {
             feedback.setText("Course added successfully");
             showAdminCourses();
             clearFields();
+
         } catch (Exception e) {
             feedback.setVisible(true);
             feedback.setStyle("-fx-text-fill: red");
@@ -158,8 +156,6 @@ public class AdminCourseViewController extends AdminDashboard {
             e.printStackTrace();
         }
     }
-
-
     public void updateCourse() {
         //hide feedback label
         feedback.setVisible(false);
@@ -188,7 +184,6 @@ public class AdminCourseViewController extends AdminDashboard {
             e.printStackTrace();
         }
     }
-
     //    delete course
     public void deleteSelectedCourse() {
         //hide feedback label
@@ -213,7 +208,6 @@ public class AdminCourseViewController extends AdminDashboard {
             e.printStackTrace();
         }
     }
-
     private void clearFields() {
         course_name.clear();
         course_credit.clear();

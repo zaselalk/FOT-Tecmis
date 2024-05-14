@@ -10,7 +10,7 @@ import java.util.List;
 public class CourseController {
     Connection connection;
 
-    protected CourseController(Connection connection) {
+    public CourseController(Connection connection) {
         this.connection = connection;
     }
 

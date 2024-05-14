@@ -9,7 +9,8 @@ import java.sql.Connection;
 
 public class LecturerController extends LecturerDashboard {
 
-    Connection connection;
+    public Connection connection;
+    int lecturer_id;
 
 
     public void showEditProfile(ActionEvent event) throws Exception {
@@ -19,13 +20,11 @@ public class LecturerController extends LecturerDashboard {
     }
 
 
-    public void initialize(int userId) {
-        System.out.println("LecturerController initialize method");
+    public void initializeDashboard(int userId, Connection connection) {
         try {
             lecturer_id = userId;
-            connection = new LecturerDatabaseConnection().getLecturerConnection();
-
-            initializeLecturerDashboard(lecturer_id);
+            connection = connection;
+            initializeLecturerDashboard(lecturer_id, connection);
 
         } catch (Exception e) {
             System.out.println("Error in LecturerController initialize method");

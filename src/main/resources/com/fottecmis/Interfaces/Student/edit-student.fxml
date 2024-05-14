@@ -1,81 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-<AnchorPane prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Student.EditStudentController">
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Student.EditStudentController">
     <children>
             <ImageView fitHeight="147.0" fitWidth="220.0" layoutX="216.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@../Image/Studentds.png" />
                 </image>
             </ImageView>
-            <VBox layoutX="494.0" layoutY="92.0" prefHeight="140.0" prefWidth="268.0">
-                <children>
-                    <Label text="Name">
-                        <VBox.margin>
-                            <Insets bottom="7.0" />
-                        </VBox.margin>
-                        <font>
-                            <Font size="16.0" />
-                        </font>
-                    </Label>
-                    <Label text="Department">
-                        <font>
-                            <Font size="16.0" />
-                        </font>
-                        <VBox.margin>
-                            <Insets bottom="7.0" />
-                        </VBox.margin>
-                    </Label>
-                    <Label text="Mail">
-                        <VBox.margin>
-                            <Insets bottom="7.0" />
-                        </VBox.margin>
-                        <font>
-                            <Font size="16.0" />
-                        </font>
-                    </Label>
-                    <Label text="Contact Numbet">
-                        <VBox.margin>
-                            <Insets bottom="7.0" />
-                        </VBox.margin>
-                        <font>
-                            <Font size="16.0" />
-                        </font>
-                    </Label>
-                </children>
-            </VBox>
-            <Line endX="602.2000122070312" layoutX="237.0" layoutY="290.0" startX="-126.80001068115234" strokeWidth="2.0" />
-            <Button layoutX="260.0" layoutY="247.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="149.0" style="-fx-border-radius: 10; -fx-background-color: #364144;" text="Edit Profile Picture" textFill="WHITE">
-                <graphic>
-                    <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../Image/EditIcon.png" />
-                        </image>
-                    </ImageView>
-                </graphic>
-                <font>
-                    <Font name="System Bold" size="12.0" />
-                </font>
-            </Button>
+        <Line endX="957.0" layoutX="237.0" layoutY="290.0" startX="-126.80001068115234" strokeWidth="2.0"/>
             <TextField layoutX="150.0" layoutY="383.0" prefHeight="27.0" prefWidth="210.0" promptText="Enter new Number" style="-fx-background-color: E1E1E1; -fx-border-radius: 20;" />
         <Text layoutX="150.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Contact Number" wrappingWidth="238.18341064453125">
                 <font>
                     <Font size="18.0" />
                 </font>
             </Text>
-            <TextField layoutX="150.0" layoutY="429.0" prefHeight="30.0" prefWidth="210.0" promptText="Enter Current Password" style="-fx-background-color: E1E1E1; -fx-border-radius: 20;" />
-            <Button layoutX="150.0" layoutY="487.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" style="-fx-background-color: E1E1E1;" text="Save">
+        <Button layoutX="150.0" layoutY="440.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0"
+                style="-fx-background-color: E1E1E1;" text="Save">
                 <graphic>
                     <ImageView fitHeight="18.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                         <image>
@@ -88,7 +34,8 @@
                 </font>
             </Button>
         <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="950.0" style="-fx-background-color: #1C5D9D;" />
-        <AnchorPane prefHeight="55.0" prefWidth="950.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="551.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane prefHeight="55.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;"
+                    AnchorPane.bottomAnchor="551.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                 <children>
                     <Button layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#showStudentDashboard" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
                <graphic>
@@ -104,16 +51,14 @@
                             <Font name="System Bold" size="13.0" />
                         </font>
                     </Text>
-                    <Button layoutX="765.0" layoutY="6.0" mnemonicParsing="false" onAction="#showStudentDashboard" prefHeight="37.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
-                        <font>
-                            <Font name="System Bold" size="13.0" />
-                        </font>
-                    </Button>
-                    <Button layoutX="844.0" layoutY="6.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="68.0" style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
-                        <font>
-                            <Font name="System Bold" size="13.0" />
-                        </font>
-                    </Button>
                 </children></AnchorPane>
+        <Label layoutX="485.0" layoutY="98.0" prefHeight="30.0" prefWidth="70.0" text="Name"/>
+        <Label layoutX="485.0" layoutY="132.0" prefHeight="30.0" prefWidth="90.0" text="Department"/>
+        <Label layoutX="485.0" layoutY="168.0" prefHeight="30.0" prefWidth="90.0" text="Address"/>
+        <Label fx:id="userfullname" layoutX="590.0" layoutY="98.0" prefHeight="30.0" prefWidth="304.0" text=":"/>
+        <Label fx:id="userdepartment" layoutX="590.0" layoutY="132.0" prefHeight="30.0" prefWidth="276.0" text=":"/>
+        <Label fx:id="useraddress" layoutX="590.0" layoutY="173.0" prefHeight="30.0" prefWidth="276.0" text=":"/>
+        <Label layoutX="485.0" layoutY="203.0" prefHeight="30.0" prefWidth="90.0" text="Email"/>
+        <Label fx:id="usermemail" layoutX="590.0" layoutY="206.0" prefHeight="30.0" prefWidth="293.0" text=":"/>
     </children>
 </AnchorPane>

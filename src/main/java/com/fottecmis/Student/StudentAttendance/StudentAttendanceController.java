@@ -6,7 +6,6 @@ import java.sql.Connection;
 
 public class StudentAttendanceController extends AttendanceController {
 
-
     protected StudentAttendanceController(Connection connection) {
         super(connection);
     }

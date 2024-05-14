@@ -17,7 +17,6 @@ import java.util.List;
 public class StudentAttendaceViewController extends StudentDashboard {
     private int student_id;
     private int course_id;
-    private int attendance_id;
     private Connection connection;
     @FXML
     private TableView<Course> course_table_view;
@@ -32,7 +31,6 @@ public class StudentAttendaceViewController extends StudentDashboard {
 
     @FXML
     private TableColumn<Attendance, String> attendanceStatus;
-
 
     public void initialize(Connection connection, int student_id) {
         this.student_id = student_id;
@@ -101,7 +99,6 @@ public class StudentAttendaceViewController extends StudentDashboard {
     }
 
     public void showStudentAttendance() {
-
 
         if (course_id == 0) {
             System.out.println("Please select a course");

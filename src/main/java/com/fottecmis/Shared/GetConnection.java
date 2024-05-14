@@ -24,6 +24,7 @@ public class GetConnection {
             String url = "jdbc:mysql://localhost:3306/tecmis";
 
             return DriverManager.getConnection(url, user, password);
+
         } catch (SQLException e) {
             System.out.println("Error in getting connection");
             System.out.println(e);
