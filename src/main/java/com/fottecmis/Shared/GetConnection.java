@@ -23,7 +23,8 @@ public class GetConnection {
 //            String url = "jdbc:mysql://mysql-server-tecmis.mysql.database.azure.com:3306/tecmis?useSSL=true&requireSSL=false&serverTimezone=UTC";
             String url = "jdbc:mysql://localhost:3306/tecmis";
 
-            return DriverManager.getConnection(url, "root", "1234");
+            return DriverManager.getConnection(url, user, password);
+
         } catch (SQLException e) {
             System.out.println("Error in getting connection");
             System.out.println(e);
