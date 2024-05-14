@@ -6,8 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 import java.io.IOException;
+import java.sql.Connection;
 
-public class TechnicalOfficerController extends TechnicalOfficerDashboard {
+public class TechnicalOfficerController {
+    Connection connection;
 
     public void viewAttendance(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("TechnicalOfficer/tech_officer_attendance");
@@ -24,7 +26,18 @@ public class TechnicalOfficerController extends TechnicalOfficerDashboard {
     public void viewMedical(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("TechnicalOfficer/tech_officer_medical");
         Parent techOfficerMedicalScene = loader.load();
+        TechnicalOfficerMedicalViewController technicalOfficerMedicalViewController = loader.getController();
+        technicalOfficerMedicalViewController.initialize(connection);
+        technicalOfficerMedicalViewController.showStudentMedical();
         SceneHandler.switchScene(event, techOfficerMedicalScene);
+    }
+
+    public void initialize() {
+        try {
+            this.connection = new TechnicalOfficerDatabaseConnection().getOfficerConnection();
+        } catch (Exception e) {
+            System.out.println("Unable to connect");
+        }
     }
 
 }

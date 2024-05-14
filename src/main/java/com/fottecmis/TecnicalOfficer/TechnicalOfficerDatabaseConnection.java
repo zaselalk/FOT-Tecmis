@@ -1,16 +1,18 @@
-package com.fottecmis.Student;
+package com.fottecmis.TecnicalOfficer;
+
 
 import com.fottecmis.Shared.DatabaseConnectionException;
 import com.fottecmis.Shared.GetConnection;
 
 import java.sql.Connection;
 
-public class StudentDatabaseConnection {
+public class TechnicalOfficerDatabaseConnection {
     private final GetConnection getConnection = new GetConnection();
 
-    public Connection getStudentDBConnection() throws DatabaseConnectionException {
-        String username = "root";
-        String password = "1234";
+    public Connection getOfficerConnection() throws DatabaseConnectionException {
+        String username = "student";
+        String password = "stu123";
         return getConnection.getMyConnection(username, password);
     }
 }
+

@@ -69,10 +69,7 @@ public class AdminNoticeViewController extends AdminDashboard {
 
         //clear previous columns
         admin_notice_tview.getColumns().clear();
-
         admin_notice_tview.getColumns().addAll(notice_title, notice_description);
-
-
     }
 
     @FXML
@@ -93,9 +90,7 @@ public class AdminNoticeViewController extends AdminDashboard {
         notice_editor.setVisible(true);
         notice_post.setText("Post Notice");
         notice_editor_text.setText("Post Notice");
-
     }
-
     @FXML
     private void deleteNotice() {
         Notice selectedNotice = admin_notice_tview.getSelectionModel().getSelectedItem();

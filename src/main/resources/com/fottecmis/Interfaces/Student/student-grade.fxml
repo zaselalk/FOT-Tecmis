@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
@@ -10,10 +8,17 @@
     <children>
         <Text layoutX="439.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Grade"/>
         <Button layoutX="58.0" layoutY="28.0" mnemonicParsing="false" onAction="#showStudentDashboard" text="Back"/>
-        <TableView layoutX="137.0" layoutY="155.0" prefHeight="391.0" prefWidth="743.0">
+        <TableView fx:id="studentGradeTableView" layoutX="137.0" layoutY="155.0" prefHeight="391.0" prefWidth="888.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="C1"/>
-                <TableColumn prefWidth="129.0" text="C2"/>
+                <TableColumn fx:id="r_id" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="course_code" prefWidth="183.0" text="Course Code"/>
+                <TableColumn fx:id="Assignment_1" prefWidth="83.0" text="Assi 1"/>
+                <TableColumn fx:id="Assignment_2" prefWidth="91.0" text="Assiment 2"/>
+                <TableColumn fx:id="quiz_1" prefWidth="91.0" text="Quiz 1"/>
+                <TableColumn fx:id="quiz_02" prefWidth="91.0" text="Quiz 2"/>
+                <TableColumn fx:id="quiz_03" prefWidth="91.0" text="Quiz 3"/>
+                <TableColumn fx:id="mid" prefWidth="91.0" text="Mid"/>
+                <TableColumn fx:id="end" prefWidth="91.0" text="End"/>
             </columns>
         </TableView>
     </children>

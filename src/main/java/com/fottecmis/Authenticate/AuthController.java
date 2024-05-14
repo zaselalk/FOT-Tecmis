@@ -4,6 +4,7 @@ import com.fottecmis.Admin.AdminController;
 import com.fottecmis.Lecturer.LecturerCourse.LecturerCourseSelectionViewController;
 import com.fottecmis.Shared.SceneHandler;
 import com.fottecmis.Student.StudentController;
+import com.fottecmis.TecnicalOfficer.TechnicalOfficerController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,6 +27,7 @@ public class AuthController {
     private TextField password;
 
 
+    //contructor
     public AuthController() {
         try {
             connection = authDatabaseConnection.getAuthConnection();
@@ -57,8 +59,6 @@ public class AuthController {
     public void login(ActionEvent event) throws Exception {
 
         if (authenticateUser(email_address.getText(), password.getText())) {
-            System.out.println("Login Successful");
-            System.out.println(getUserTypeByEmail(email_address.getText()));
             showDashboard(event, getUserTypeByEmail(email_address.getText()));
 
         } else {
@@ -156,6 +156,8 @@ public class AuthController {
     public void showTechnicalOfficerDashboard(ActionEvent event) throws IOException {
         FXMLLoader loader = SceneHandler.createLoader("TechnicalOfficer/technical_officer");
         Parent technicalOfficerScene = loader.load();
+        TechnicalOfficerController technicalOfficerController = loader.getController();
+        technicalOfficerController.initialize();
         SceneHandler.switchScene(event, technicalOfficerScene);
     }
 

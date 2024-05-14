@@ -5,7 +5,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Lecturer.LecturerMedical.LecturerMedicalViewController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.fottecmis.Lecturer.LecturerMedical.LecturerMedicalViewController">
     <children>
         <AnchorPane prefHeight="55.0" prefWidth="950.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>

@@ -1,6 +1,6 @@
 package com.fottecmis.Shared.Modules.Notice;
 
-public class Notice {
+public class Notice implements NoticeInterface {
     protected int notice_id;
     protected String notice_title;
     protected String notice_description;
