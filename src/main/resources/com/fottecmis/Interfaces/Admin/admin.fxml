@@ -1,21 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.fottecmis.Admin.AdminController">
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Admin.AdminController">
     <children>
-        <Text layoutX="286.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin"/>
-        <ButtonBar layoutX="115.0" layoutY="140.0" prefHeight="40.0" prefWidth="200.0"/>
-        <Button layoutX="50.0" layoutY="131.0" mnemonicParsing="false" onAction="#coursesView" prefHeight="87.0"
-                prefWidth="142.0" text="Courses"/>
-        <Button layoutX="226.0" layoutY="135.0" mnemonicParsing="false" onAction="#noticeView" prefHeight="87.0"
-                prefWidth="142.0" text="Notice"/>
-        <Button layoutX="408.0" layoutY="135.0" mnemonicParsing="false" onAction="#usersView" prefHeight="87.0"
-                prefWidth="142.0" text="Users"/>
-        <Button layoutX="226.0" layoutY="270.0" mnemonicParsing="false" onAction="#timeTableView" prefHeight="87.0"
-                prefWidth="142.0" text="TimeTable"/>
+        <AnchorPane prefHeight="62.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="WHITE" layoutX="54.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Techmis - Faculty of Technology University of Ruhuna ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Button layoutX="987.0" layoutY="17.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="1090.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;">
+                    <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Image/backIcon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;" />
+        <Button layoutX="256.0" layoutY="225.0" mnemonicParsing="false" onAction="#coursesView" prefHeight="87.0" prefWidth="142.0" style="-fx-background-color: #1C5D9D;">
+         <graphic>
+            <ImageView fitHeight="67.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/course.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <Button layoutX="452.0" layoutY="225.0" mnemonicParsing="false" onAction="#noticeView" prefHeight="87.0" prefWidth="142.0" style="-fx-background-color: #1C5D9D;">
+         <graphic>
+            <ImageView fitHeight="62.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/AdminNotice.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <Button layoutX="452.0" layoutY="381.0" mnemonicParsing="false" onAction="#usersView" prefHeight="87.0" prefWidth="142.0" style="-fx-background-color: #1C5D9D;">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/User.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="256.0" layoutY="381.0" mnemonicParsing="false" onAction="#usersView" prefHeight="87.0" prefWidth="142.0" style="-fx-background-color: #1C5D9D;">
+         <graphic>
+            <ImageView fitHeight="71.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/time%20table.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+        <Text fill="RED" layoutX="561.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" wrappingWidth="107.03983306884766">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="329.0" fitWidth="583.0" layoutX="615.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Admin.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

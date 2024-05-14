@@ -43,7 +43,7 @@
          <Image url="@../../../../images/lecture.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="677.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="130.0" fitWidth="119.0" layoutX="189.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../../images/logo.png" />
       </image>
