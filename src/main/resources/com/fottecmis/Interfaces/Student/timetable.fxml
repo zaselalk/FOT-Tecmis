@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="405.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.Student.TimeTableController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c5d9d" height="49.0" layoutX="-1.0" layoutY="-7.0" stroke="#1c5d9d" strokeType="INSIDE" width="646.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c5d9d" height="49.0" layoutY="364.0" stroke="#1c5d9d" strokeType="INSIDE" width="645.0" />
+      <Text fill="#f61818" layoutX="249.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Inter; -fx-font-style: normal; -fx-font-weight: 700;" text="TIME TABLE" textAlignment="JUSTIFY" wrappingWidth="304.6383056640625">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <TableView layoutX="101.0" layoutY="88.0" prefHeight="255.0" prefWidth="444.0">
+        <columns>
+          <TableColumn prefWidth="88.0" text="Monday" />
+          <TableColumn prefWidth="92.79998779296875" text="Tuesday" />
+            <TableColumn prefWidth="76.0" text="Wednesday" />
+            <TableColumn prefWidth="100.0" text="Thrusday" />
+            <TableColumn prefWidth="88.800048828125" text="Friday" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
