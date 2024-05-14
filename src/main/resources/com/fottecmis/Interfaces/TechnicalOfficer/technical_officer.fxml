@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.fottecmis.TecnicalOfficer.TechnicalOfficerController">
 
-    <Text layoutX="229.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Technical Officer"/>
-    <Button layoutX="52.0" layoutY="137.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="73.0"
-            prefWidth="144.0" text="Attendance"/>
-    <Button layoutX="220.0" layoutY="137.0" mnemonicParsing="false" prefHeight="73.0" onAction="#viewMedical"
-            prefWidth="144.0" text="Medical"/>
-    <Button layoutX="405.0" layoutY="137.0" mnemonicParsing="false" prefHeight="73.0" onAction="#viewTimeTable"
-            prefWidth="144.0" text="Time Table"/>
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fottecmis.TecnicalOfficer.TechnicalOfficerController">
+    <AnchorPane prefHeight="55.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <Text fill="WHITE" layoutX="64.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Techmis - Faculty of Technology University of Ruhuna ">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Text>
+            <Button layoutX="984.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #1C5D9D;" text="Dashbord" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="1108.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #1C5D9D;" text="Log out" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #1C5D9D;" />
+              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../Image/backIcon.png" />
+                  </image>
+              </ImageView>
+        </children>
+    </AnchorPane>
+    <AnchorPane layoutY="576.0" prefHeight="30.0" prefWidth="1200.0" style="-fx-background-color: #1C5D9D;" />
+    <Text fill="RED" layoutX="534.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Technical Officer" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font></Text>
+    <Button graphicTextGap="10.0" layoutX="244.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="74.0" prefWidth="144.0" text="Attendance" textFill="#2b179e">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+    <Button layoutX="567.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewMedical" prefHeight="73.0" prefWidth="144.0" text="Medical" textAlignment="CENTER" textFill="#2b179e">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+    <Button layoutX="915.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewTimeTable" prefHeight="73.0" prefWidth="144.0" text="Time Table" textAlignment="RIGHT" textFill="#2b179e">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
 
 </AnchorPane>
